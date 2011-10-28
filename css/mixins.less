@@ -1,0 +1,55 @@
+#gradient {
+  .linear(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+    background-color: @color;
+    background-image: -webkit-gradient(linear, left top, left top, color-stop(0, @start), color-stop(1, @stop));
+    background-image: -webkit-linear-gradient(@start, @stop);
+    background-image: -ms-linear-gradient(top, @start, @stop);
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@start,@stop)); // IE6 & IE7
+    -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@start,@stop); // IE8+
+    background-image: -moz-linear-gradient(center top, @start 0%, @stop 100%);
+    background-image: -o-linear-gradient(@start, @stop);
+    background-image: linear-gradient(@start, @stop);
+  }
+  .linear-double(@color, @start: #EEE, @stop: #FFF){
+    background-color: @color;
+    background-image: -webkit-gradient(linear, left top, left top, color-stop(0, @start), color-stop(1, @stop));
+    background-image: -webkit-linear-gradient(@start, @start, @stop, @stop);
+    background-image: -ms-linear-gradient(top, @start, @start, @stop, @stop);
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@start,@stop)); // IE6 & IE7
+    -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@start,@stop); // IE8+
+    background-image: -moz-linear-gradient(center top, @start 0%, @stop 100%);
+    background-image: -o-linear-gradient(@start, @start, @stop, @stop);
+    background-image: linear-gradient(@start, @start, @stop, @stop);
+  }
+  .clear() {
+    background-color: transparent;
+    background-image: none;
+  }
+}
+
+#border {
+  .shadow(@arguments: 0 0 10px rgba(14, 32, 59, 0.25)) {
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    box-shadow: @arguments;
+  }
+  .radius(@radius: 2px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+  }
+}
+
+.opacity(@opacity: 100) {
+  filter: e(%("alpha(opacity=%d)", @opacity));
+  -khtml-opacity: @opacity / 100;
+  -moz-opacity: @opacity / 100;
+  opacity: @opacity / 100;
+}
+
+.transition(@arguments: width 0.3s ease) {
+  -webkit-transition:@arguments;
+  -moz-transition:@arguments;
+  -o-transition:@arguments;
+  transition:@arguments;
+}
