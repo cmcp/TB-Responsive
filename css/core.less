@@ -2,6 +2,9 @@
 @import 'mixins.less';
 @import 'reset.less';
 
+// Touch devices
+@import 'touch.less';
+
 // Responsive breakpoints
 @import '300px.less';
 @import '400px.less';
@@ -215,7 +218,7 @@ h1, h2, h3, h4, h5, h6 {  font-weight: bold; font-family: /* Brand,  */Calibri, 
   float:left;
   border:1px solid #d5d9df;
   width:45%;
-  padding:1em 2%; 
+  padding:1em 2%;
   margin:0;
 }
 
@@ -346,6 +349,12 @@ h1, h2, h3, h4, h5, h6 {  font-weight: bold; font-family: /* Brand,  */Calibri, 
   .wide_ie();
   .ie_old();
   #fullsite, #relaxfull { display:none; }
+}
+
+/* ================ Touch devices =====================*/
+
+.touch {
+  .touch_support();
 }
 
 /* ================ Other =============================*/

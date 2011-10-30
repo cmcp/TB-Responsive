@@ -1,6 +1,11 @@
 ﻿  </div><!-- .wrapper -->
   <script src="js/jquery.legacy.js" type="text/javascript"></script>
   <script>
+// Skip the Nav bar on a mobile.  http://remysharp.com/2010/08/05/doing-it-right-skipping-the-iphone-url-bar/
+/mobile/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+  if (!pageYOffset) window.scrollTo(0, 1);
+}, 1000);
+
 $(document).ready(function () {
   $('#fullsite').html('<a class="btn" id="showfull">Show full site</a>')
   $('#relaxsite').html('<a class="btn" id="relaxfull">Return to optimised site</a>');
