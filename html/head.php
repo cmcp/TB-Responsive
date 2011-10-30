@@ -5,7 +5,7 @@
   <title>brandbank.com</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <script>
-document.getElementsByTagName('html')[0].className += ' js touch';
+document.getElementsByTagName('html')[0].className += ' js';
 if ('ontouchstart' in window) {
   document.getElementsByTagName('html')[0].className += ' touch';
 }
