@@ -1,8 +1,7 @@
 <?php include('html/head.php'); ?>
     <header>
       <div class="header">
-        <div class="logo"><a href="/"><img src="img/logo.png" alt="Brand Bank"/></a></div>
-        <div class="home-link"><a href="/"><img src="img/home.png" alt="Home"/></a></div>
+        <?php include('html/home.php') ?>
         <nav>
           <div class="nav">
             <?php include('html/keyline.php'); ?>
@@ -19,23 +18,23 @@
         <div class="split">
           <section>
             <div class="section">
-              <?php include('html/dcrs/travel/3-existing-policy.php'); ?>
+              <?php section('hero'); ?>
             </div>
           </section>
           <div class="fireplace">
           <div class="split split-70">
-            <?php include('html/dcrs/travel/2-underwiters.php'); ?>
+            <?php section('main'); ?>
           </div>
           <div class="split split-30">
-            <?php include('html/dcrs/travel/1-existing-customer.php'); ?>
+            <?php section('key'); ?>
           </div>
           </div><!-- .fireplace -->
         </div><!-- split -->
       </div>
       <div class="sec-col">
         <div class="split">
-          <?php include('html/dcrs/travel/left-nav.php'); ?>
-          <?php include('html/dcrs/travel/1-elh.php'); ?>
+          <?php section('nav2'); ?>
+          <?php section('supp'); ?>
         </div>
       </div>
       </div>

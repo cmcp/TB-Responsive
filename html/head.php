@@ -56,8 +56,8 @@ docCookies = {
   }
 })();
   </script>
-  <link rel="stylesheet/less" href="css/core.less"/>
-  <script src="js/lib/less.js"></script>
+  <link rel="stylesheet/less" href="/css/core.less"/>
+  <script src="/js/lib/less.js"></script>
   <script>
 less.env = 'development';
   </script>

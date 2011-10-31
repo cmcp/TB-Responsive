@@ -5,7 +5,7 @@
         <li class="active ">Travel insurance
           <ul class="sub-level">
             <li class=" "><a shape="rect" href="">Our cover options</a></li>
-            <li class=" divide"><a shape="rect" href="content-page.php">Policy info</a></li>
+            <li class=" divide"><a shape="rect" href="/travel/policy-info">Policy info</a></li>
             <li class=" "><a shape="rect" href="">Existing travel insurance customers</a></li>
             <li class=" "><a shape="rect" href="">Contact us</a></li>
           </ul>

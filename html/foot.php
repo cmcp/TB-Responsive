@@ -1,5 +1,5 @@
 ﻿  </div><!-- .wrapper -->
-  <script src="js/jquery.legacy.js" type="text/javascript"></script>
+  <script src="/js/jquery.legacy.js" type="text/javascript"></script>
   <script>
 // Skip the Nav bar on a mobile.  http://remysharp.com/2010/08/05/doing-it-right-skipping-the-iphone-url-bar/
 /mobile/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {

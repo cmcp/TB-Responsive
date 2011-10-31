@@ -3,3 +3,8 @@
 #</IfModule>
 
 FileETag None
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+#redirect to our front web controller
+RewriteRule ^(.*)$ index.php?page=$1 [QSA,L]

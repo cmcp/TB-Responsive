@@ -23,7 +23,7 @@
           <li><a href="#">Fixed Rate Saver</a></li>
           <li><a href="#">Internet Saver</a></li>
           <li><a href="#">Instant Access Savings</a></li>
-          <li><a href="content-page.php">Travel Money</a></li>
+          <li><a href="/travel/">Travel Money</a></li>
           <li><a href="#">International Money Transfer</a></li>
           <li><a href="#">ATMs (Cash Machines)</a></li>
         </ol>
