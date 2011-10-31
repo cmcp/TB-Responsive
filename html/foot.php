@@ -12,12 +12,12 @@ $(document).ready(function () {
   $('#showfull').live('click', function () {
     $('html').addClass('wide');
     window.scrollTo(0,0);
-    document.cookie = 'TB_fullsite';
+    docCookies.setItem('TB_fullsite', 'true');
   });
   $('#relaxfull').live('click', function () {
     $('html').removeClass('wide');
     window.scrollTo(0,0);
-    document.cookie = '';
+    docCookies.removeItem('TB_fullsite');
   });
 
   if ($('#all-products-nav').length) {
