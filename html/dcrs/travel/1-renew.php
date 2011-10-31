@@ -1,0 +1,1 @@
+﻿<div class="panel type-1 bdr-1 cnr bg  cta-left"><div class="wrap"><h3>Looking to renew your Tesco Travel Insurance?</h3><p>Talk to one of the team on:<br><strong class="rate red">0845 293 9476</strong></p></div></div>
