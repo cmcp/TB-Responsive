@@ -60,7 +60,7 @@ docCookies = {
   <script src="js/lib/less.js"></script>
   <script>
 less.env = 'development';
-</script>
+  </script>
   </head>
   <body>
     <div class="wrapper">

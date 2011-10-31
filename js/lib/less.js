@@ -2678,7 +2678,8 @@
     };
     less.refreshStyles = loadStyles;
 
-    less.refresh(less.env === 'development');
+    //less.refresh(less.env === 'development');
+    less.refresh(true);
 
     function loadStyles() {
         var styles = document.getElementsByTagName('style');
