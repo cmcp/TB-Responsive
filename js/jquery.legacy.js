@@ -316,8 +316,8 @@ var brandInterface = {
 
 		$(".rmc").wrapInner('<div class="inner"></div>'); //
 
-		var btnOpen = "<a href=\"\" class=\"sprite toggle btn-read-more\"><img src=\"\" alt=\"Read more\" /></a>";
-		var btnClose = "<a href=\"\" class=\"sprite toggle btn-close\"><img src=\"\" alt=\"Close\" /></a>";
+		var btnOpen = '<a href="#" class="btn toggle btn-read-more">Read More</a>';
+		var btnClose = '<a href="#" class="btn toggle btn-close">Close</a>';
 
 		// Insert toggle buttons
 		$(".read-more h3").after( btnOpen );
@@ -328,9 +328,9 @@ var brandInterface = {
 		$(".read-more .toggle").each(function(){
 
 			// Add relevant alt text (taken from heading) to open and close buttons
-			var hContent = $(this).siblings('h3').text();
-			var aContent = $("img",this).attr("alt") +  " - " + hContent;
-			$("img",this).attr("alt", aContent);
+			//var hContent = $(this).siblings('h3').text();
+			//var aContent = $("img",this).attr("alt") +  " - " + hContent;
+			//$("img",this).attr("alt", aContent);
 
 			// On click do stuff
 			$(this).click(function(e){
