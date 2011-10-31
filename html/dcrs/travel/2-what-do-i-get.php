@@ -6,4 +6,4 @@
 <li><strong>Pay for all or part of your cover with Clubcard Vouchers</strong>. To find out how <a shape="rect" href="/personal/finance/insurance/travelins/policy-info.html">read the policy info</a> page.</li>
 </ul>
 </div>
-<img src="/img/placeholder.png" alt=""></div></div>
+<img src="/img/travel/battered-suitcase-t2c.png" alt=""></div></div>

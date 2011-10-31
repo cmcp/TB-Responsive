@@ -10,7 +10,7 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </div>
-<a shape="rect" href="#offer"><img src="/img/placeholder.png" alt="Family cover only £2.30 per day"></a> 
+<a shape="rect" href="#offer"><img src="/img/travel/p7-beachkit-t2f.png" alt="Family cover only £2.30 per day"></a>
 <ul class="cta">
 <li><a shape="rect" rel="#prescreen" href="#" class="btn">Get a quote for a Brand Travel Insurance</a></li>
 </ul></div></div>

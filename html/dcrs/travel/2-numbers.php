@@ -1,5 +1,5 @@
 ﻿<div class="panel type-2 bdr-2 cnr bg copy img  "><div class="wrap">
-<table cellspacing="0" cellpadding="0" summary="Tesco Travel Insurance Ageas Insurance Limited telephone numbers">
+<table cellspacing="0" cellpadding="0" summary="Brand Travel Insurance Ageas Insurance Limited telephone numbers">
 <tbody>
 <tr>
 <th scope="row" rowspan="1" colspan="1">Customer Services Line</th>
@@ -17,6 +17,6 @@
 </table>
 <p>Calls may be recorded.</p>
 <p><strong>Or you can write to us at:</strong></p>
-<p>Tesco Travel Insurance<br>Prospect House<br>Trentham Lakes North<br>Stoke on Trent<br>ST4 4TW</p>
+<p>Brand Travel Insurance<br>Prospect House<br>Trentham Lakes North<br>Stoke on Trent<br>ST4 4TW</p>
 
 </div></div>
