@@ -1,6 +1,6 @@
 <?php include('html/head.php'); ?>
     <header>
-      <div class="header">
+      <div class="header wrapper">
         <?php include('html/home.php') ?>
         <nav>
           <div class="nav">
@@ -12,7 +12,9 @@
         </div>
       </div><!-- .header -->
     </header>
-    <div id="content">
+    <div class="offset">
+    <div id="content" class="wrapper">
+    <div class="offset-inner">
       <div class="sec-col">
         <div class="split">
           <?php section('nav2'); ?>
@@ -34,12 +36,15 @@
           </div><!-- .fireplace -->
         </div>
       </div>
+      </div>
+      </div><!-- #content -->
+    </div><!-- .offset -->
       <nav>
-        <div class="nav">
+        <div class="nav wrapper">
           <?php include('html/nav-main.php'); ?>
         </div>
       </nav>
-    </div><!-- #content -->
+      
 
 <?php include('html/footer.php'); ?>
 <?php include('html/foot.php'); ?>

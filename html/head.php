@@ -63,4 +63,4 @@ less.env = 'development';
   </script>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="full">

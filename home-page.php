@@ -1,6 +1,6 @@
 ﻿<?php include('html/head.php'); ?>
     <header>
-      <div class="header">
+      <div class="header wrapper">
         <?php include('html/home.php') ?>
         <nav>
           <div class="nav">
@@ -12,19 +12,25 @@
       </div><!-- .header -->
     </header>
     <div id="content">
+    <div class="offset wide-1">
+      <div class="offset-inner">
       <section>
-        <div class="section wide-1 clearboth">
+        <div class="section wrapper">
           <?php include('html/4-travel.php'); ?>
           <?php include('html/4-dental.php'); ?>
         </div>
       </section>
+      </div>
+    </div><!-- .offset -->
+    <div class="wrapper">
       <div class="split split-70">
         <?php include('html/all-products.php'); ?>
         <?php include('html/tasks.php'); ?>
       </div><!-- split -->
       <?php include('html/sidebar.php'); ?>
       <?php include('html/supplimental.php'); ?>
-    </div><!-- #content -->
+    </div><!-- .wrapper -->
 
+    </div><!-- #content -->
 <?php include('html/footer.php'); ?>
 <?php include('html/foot.php'); ?>
