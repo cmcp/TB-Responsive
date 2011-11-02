@@ -1,4 +1,4 @@
-﻿<div class="panel type-3 bdr-3 cnr bg feature img img-20 cta-right"><div class="wrap"><h2>Brand Travel Insurance</h2><div class="content">
+﻿<div class="panel type-3 bdr-3 cnr bg feature img img-20 cta-right wide-0"><div class="wrap"><h2>Brand Travel Insurance</h2><div class="content">
 <p><strong>Buy a family policy online from only £2.30 per day<sup>*</sup></strong></p>
 <p class="small">*Based on Value cover for 15 days for 2 adults and 2 children aged under 64 travelling to Europe with no existing medical conditions.</p>
 <ul>

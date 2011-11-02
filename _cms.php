@@ -18,10 +18,10 @@ $DCR_MAP = array(
   'travel/' => array (
     'template' => 'nav-page.php',
     'nav2' => array('html/dcrs/travel/left-nav.php'),
-    'key' => array('html/dcrs/travel/1-existing-customer.php', 'html/dcrs/travel/1-retrieve-quote.php', 'html/dcrs/travel/1-call-for-quote.php'),
+    'key' => array('html/dcrs/travel/1-existing-customer.php', 'html/dcrs/travel/1-retrieve-quote.php', ),
     'hero' => array('html/dcrs/travel/3-hero.php'),
     'main' => array('html/dcrs/travel/2-what-do-i-get.php'),
-    'supp' => array('html/dcrs/travel/1-elh.php'),
+    'supp' => array('html/dcrs/travel/1-call-for-quote.php', 'html/dcrs/travel/1-elh.php'),
   ),
   'travel/policy-info' => array (
     'template' => 'content-page.php',
@@ -50,10 +50,10 @@ $DCR_MAP = array(
   'travel/existing-customers' => array (
     'template' => 'content-page.php',
     'nav2' => array('html/dcrs/travel/left-nav.php'),
-    'key' => array('html/dcrs/travel/1-renew.php'),
+    'key' => array('html/dcrs/travel/1-elh.php'),
     'hero' => array(),
-    'main' => array('html/dcrs/travel/2-recommend-friend.php'),
-    'supp' => array('html/dcrs/travel/1-elh.php'),
+    'main' => array('html/dcrs/travel/1-renew.php', 'html/dcrs/travel/2-recommend-friend.php'),
+    'supp' => array(),
   ),
   
 );
