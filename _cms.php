@@ -47,13 +47,13 @@ $DCR_MAP = array(
     'main' => array(),
     'supp' => array('html/dcrs/travel/1-elh.php'),
   ),
-  'travel/existing-customers' => array (
+  'travel/apply' => array (
     'template' => 'content-page.php',
     'nav2' => array('html/dcrs/travel/left-nav.php'),
-    'key' => array('html/dcrs/travel/1-elh.php'),
+    'key' => array('html/dcrs/travel/1-call-for-quote.php', 'html/dcrs/travel/1-retrieve-quote.php', 'html/dcrs/travel/1-existing-customer.php'),
     'hero' => array(),
-    'main' => array('html/dcrs/travel/1-renew.php', 'html/dcrs/travel/2-recommend-friend.php'),
-    'supp' => array(),
+    'main' => array('html/dcrs/travel/2-quote.php', 'html/dcrs/travel/2-apply-info.php', 'html/dcrs/travel/2-important-info.php'),
+    'supp' => array('html/dcrs/travel/1-elh.php'),
   ),
   
 );

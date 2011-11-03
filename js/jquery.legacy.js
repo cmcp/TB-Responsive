@@ -402,57 +402,77 @@ var brandInterface = {
 
 	brandTabs: function(){
 
-		/* TABS
-		---------------------------------------------
-		Creates a tabbed interface out of content on the page.
+    /* TABS
+    ---------------------------------------------
+    Creates a tabbed interface out of content on the page.
 
-		This is aceived by looking for
-		class="panes", checking the headings in the
-		child container and then using those headers
-		as the titles of the tabs.
-		*/
+    This is aceived by looking for
+    class="panes", checking the headings in the
+    child container and then using those headers
+    as the titles of the tabs.
+    */
 
-		var tabsIndex = 0;
-		var tabCount = 0;
+    var tabsIndex = 0, tabCount = 0;
+    
+    $('.panes').css('display', 'inherit');
+    if ($(window).width() < 768) {
 
-		$(".panes").each(function(){
+      $(".panes").each(function(){
+        tabsIndex += 1;
+        tabCount = 0;
+        $('.panel', this).each(function() {
+          tabCount += 1;
+          var heading = $('h2:first', this).remove();
+          heading.attr('id', 'tab-' + tabsIndex + ':' + tabCount);
+          $(this).before(heading);
+        });
+      });
+      var api = $('.panes').tabs('.panes div.panel', {tabs: 'h2', effect: 'slide', initialIndex: 999,
+        onClick: function(event, index) {
+          //console.log(this.getCurrentTab().offset());
+          $(document).scrollTop(this.getCurrentTab().offset()['top']);
+        }
+      });
+    } else {
+      $('.panes').each(function(){
+        tabsIndex += 1;
 
-			tabsIndex++;
+        // Create list with unique id
+        $(this).prepend('<ul class="tabs" id="tabs-' + tabsIndex + '"></ul>');
 
-			// Create list with unique id
-			$(this).prepend('<ul class="tabs" id="tabs-' + tabsIndex + '"></ul>');
+        // For each panel heading create a tab and append it to the list
+        $(this).find(".panel h2").each(function() {
+          var tabTitle = $(this).text();
 
-			// For each panel heading create a tab and append it to the list
-			$(this).find(".panel h2").each(function() {
+          tabCount += 1;
 
-				tabCount++;
+          $("#tabs-" + tabsIndex).append('<li><a href="#tab' + tabCount + '">' +  tabTitle + '</a><div></div></li>');
 
-				var tabTitle = $(this).text();
+          $(this).css({ "position" : "absolute", "left" : "-9999px" });
 
-				$("#tabs-" + tabsIndex).append('<li><a href="#tab' + tabCount + '">' +  tabTitle + '</a><div></div></li>');
+        });
 
-				$(this).css({ "position" : "absolute", "left" : "-9999px" });
+        $("#tabs-" + tabsIndex + " li a").each(function() {
+          var myW = $(this).width(),
+              newW = myW + 5;
 
-			});
+          $(this).width(newW);
+          $(this).next("div").width(newW);
+        });
+        
 
-			$("#tabs-" + tabsIndex + " li a").each(function() {
-				var myW = $(this).width();
-				var newW = myW + 5;
+      });
+    }
 
-				$(this).width(newW);
-				$(this).next("div").width(newW);
-			});
+    //initiate tabs
+    $("ul.tabs").tabs("div.panes > div.panel", {
+      tabs: 'li'
+    });
 
-		});
-
-		//initiate tabs
-		$("ul.tabs").tabs("div.panes > div.panel", {
-			tabs: 'li'
-		});
-
-	},
+  },
 
 	brandOverlays: function(){
+    return; // Overlays are disabled.
 
 		// Overlays don't work properly with small viewports so, if we don't have space, we cowardly abdicate at this point.
 		if ($(window).height() < 598 || $(window).width() < 558) {
