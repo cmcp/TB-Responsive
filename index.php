@@ -2,4 +2,8 @@
 require_once('_cms.php');
 
 //print($_GET['page']);
-include($DCR_MAP[$_GET['page']]['template']);
+if (array_key_exists($_GET['page'], $DCR_MAP)) {
+  include($DCR_MAP[$_GET['page']]['template']);
+} else {
+  print('<h1>Page not found</h1>');
+}
