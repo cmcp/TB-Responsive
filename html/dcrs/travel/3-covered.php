@@ -3,7 +3,7 @@
 <div class="wrap">
 <h2>What's Covered?</h2>
 <p>The table outlines details of what each level of cover provides, to help you decide which is right for you:</p>
-<table cellspacing="0" cellpadding="0" summary="Tesco Travel Insurance cover summary table">
+<table cellspacing="0" cellpadding="0" summary="Brand Travel Insurance cover summary table">
 <thead> 
 <tr>
 <th scope="col" rowspan="1" colspan="1" class="left fixed">Cover Level</th> <th scope="col" rowspan="1" colspan="1">Value Cover</th> <th scope="col" rowspan="1" colspan="1">Standard Cover</th> <th scope="col" rowspan="1" colspan="1" class="lastcol">Finest Cover</th>
@@ -117,7 +117,7 @@
 <div class="wrap">
 <h2>Optional Extras</h2>
 <h3>Winter sports cover</h3>
-<table cellspacing="0" cellpadding="0" summary="Tesco Travel Insurance optional Winter Sports cover summary table">
+<table cellspacing="0" cellpadding="0" summary="Brand Travel Insurance optional Winter Sports cover summary table">
 <thead> 
 <tr>
 <th scope="col" rowspan="1" colspan="1" class="left fixed">Cover Levels</th> <th scope="col" rowspan="1" colspan="1">Value Cover</th> <th scope="col" rowspan="1" colspan="1">Standard Cover</th> <th scope="col" rowspan="1" colspan="1" class="lastcol">Finest Cover</th>
@@ -157,7 +157,7 @@
 </tbody>
 </table>
 <h3>Golf cover</h3>
-<table cellspacing="0" cellpadding="0" summary="Tesco Travel Insurance optional Golf Cover summary table">
+<table cellspacing="0" cellpadding="0" summary="Brand Travel Insurance optional Golf Cover summary table">
 <thead> 
 <tr>
 <th scope="col" rowspan="1" colspan="1" class="left fixed">Cover Levels</th> <th scope="col" rowspan="1" colspan="1">Value Cover</th> <th scope="col" rowspan="1" colspan="1">Standard Cover</th> <th scope="col" rowspan="1" colspan="1" class="lastcol">Finest Cover</th>
@@ -185,7 +185,7 @@
 </tbody>
 </table>
 <h3>Wedding cover</h3>
-<table cellspacing="0" cellpadding="0" summary="Tesco Travel Insurance optional Wedding Cover summary table">
+<table cellspacing="0" cellpadding="0" summary="Brand Travel Insurance optional Wedding Cover summary table">
 <thead> 
 <tr>
 <th scope="col" rowspan="1" colspan="1" class="left fixed">Cover Levels</th> <th scope="col" rowspan="1" colspan="1">Value Cover</th> <th scope="col" rowspan="1" colspan="1">Standard Cover</th> <th scope="col" rowspan="1" colspan="1" class="lastcol">Finest Cover</th>
