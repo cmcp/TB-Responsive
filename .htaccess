@@ -6,5 +6,11 @@ FileETag None
 
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
+# If the pre-built css file exists then serve it
+RewriteCond css/core.css -f
+#redirect to our front web controller
+RewriteRule ^(.*)$ index.php?page=$1&built-css=true [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
 #redirect to our front web controller
 RewriteRule ^(.*)$ index.php?page=$1 [QSA,L]
