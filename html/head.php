@@ -56,14 +56,14 @@ docCookies = {
   }
 })();
   </script>
-<?php if (@$_GET['built-css'] != 'true') { ?>
+<?php if (file_exists($BASE_PATH.'/css/core.css')) { ?>
+  <link rel="stylesheet" href="/css/core.css"/>
+<?php } else { ?>
   <link rel="stylesheet/less" href="/css/core.less"/>
   <script src="/js/lib/less.js"></script>
   <script>
 less.env = 'development';
   </script>
-<?php } else { ?>
-  <link rel="stylesheet" href="/css/core.css"/>
 <?php } ?>
   </head>
   <body>
