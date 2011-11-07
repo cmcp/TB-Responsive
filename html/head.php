@@ -56,7 +56,7 @@ docCookies = {
   }
 })();
   </script>
-<?php if (@$_GET['built-css'] == 'true') { ?>
+<?php if (@$_GET['built-css'] != 'true') { ?>
   <link rel="stylesheet/less" href="/css/core.less"/>
   <script src="/js/lib/less.js"></script>
   <script>
