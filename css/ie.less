@@ -1,5 +1,38 @@
-﻿.ie_old() {
-  body {
-    //background-color:red;
-  }
+﻿// Global imports
+@import 'mixins.less';
+
+@import '300px.less';
+@import '400px.less';
+@import '600px.less';
+@import '700px.less';
+@import '900px.less';
+@import '1000px.less';
+@import '1200px.less';
+
+.min-width_320px();
+.min-width_360px();
+.min-width_460px();
+.min-width_660px();
+.min-width_768px();
+.min-width_920px();
+
+.wrapper {
+  width:960px;
+  margin:auto;
+}
+.nav-main {
+  width:900px;
+  margin-left:30px;
+}
+body {
+  //background-color:red;
+}
+
+#fullsite, #relaxfull { display:none; }
+
+.wide-0, .wide-1 {
+  display:block !important;
+}
+.narrow-0 {
+  display:none !important;
 }

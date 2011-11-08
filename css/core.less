@@ -15,10 +15,7 @@
 @import '1200px.less';
 
 // Internot Exploder
-@import 'ie.less';
-
-@copy-font: Verdana, Arial, sans-serif;
-@brand-font: Calibri, Helvetica, Arial ,sans-serif;
+//@import 'ie.less';
 
 * {
   .transition(width 0.2s ease)
@@ -446,7 +443,7 @@ ul.tabs {
   .min-width_1200px();
 }
 
-.wide_ie() {
+.wide {
   .min-width_768px();
   .min-width_920px();
   .wrapper, #content {
@@ -456,17 +453,11 @@ ul.tabs {
     width:900px;
     margin-left:30px;
   }
-}
-.wide {
-  .wide_ie();
   #relaxfull { display:inherit; }
   #fullsite { display:none; }
 }
-.ie {
-  .wide_ie();
-  .ie_old();
-  #fullsite, #relaxfull { display:none; }
-}
+
+
 
 /* ================ Touch devices =====================*/
 

@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html>
-<!--[if (lt IE 9) ]><html class="ie"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html><!--<![endif]-->
+﻿<?php $less = 0; ?><!doctype html>
+<html lang="en">
 <head>
+  <?php if ($_SERVER['HTTP_HOST'] == 'localhost') { print('<script type="text/javascript" src="/js/lib/firebug-lite/build/firebug-lite.js"></script>'); } ?>
   <title>brandbank.com</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <script>
@@ -17,19 +17,6 @@ docCookies = {
     if (!sKey || !this.hasItem(sKey)) { return null; }
     return unescape(document.cookie.replace(new RegExp("(?:^|.*;\\s*)" + escape(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*((?:[^;](?!;))*[^;]?).*"), "$1"));
   },
-  /**
-  * docCookies.setItem(sKey, sValue, vEnd, sPath, sDomain, bSecure)
-  *
-  * @argument sKey (String): the name of the cookie;
-  * @argument sValue (String): the value of the cookie;
-  * @optional argument vEnd (Number, String, Date Object or null): the max-age in seconds (e.g., 31536e3 for a year) or the
-  *  expires date in GMTString format or in Date Object format; if not specified it will expire at the end of session;
-  * @optional argument sPath (String or null): e.g., "/", "/mydir"; if not specified, defaults to the current path of the current document location;
-  * @optional argument sDomain (String or null): e.g., "example.com", ".example.com" (includes all subdomains) or "subdomain.example.com"; if not
-  * specified, defaults to the host portion of the current document location;
-  * @optional argument bSecure (Boolean or null): cookie will be transmitted only over secure protocol as https;
-  * @return undefined;
-  **/
   setItem: function (sKey, sValue, vEnd, sPath, sDomain, bSecure) {
     if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/.test(sKey)) { return; }
     var sExpires = "";
@@ -60,6 +47,13 @@ docCookies = {
   <link rel="stylesheet" href="/css/core.css"/>
 <?php } else { ?>
   <link rel="stylesheet/less" href="/css/core.less"/>
+<?php $less += 1; } ?>
+<?php if (file_exists($BASE_PATH.'/css/core.css')) { ?>
+  <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie.css"/><![endif]-->
+<?php } else { ?>
+  <!--[if lte IE 8]><link rel="stylesheet/less" href="/css/ie.less"/><![endif]-->
+<?php $less += 1; } ?>
+<?php if ($less) { ?>
   <script src="/js/lib/less.js"></script>
   <script>
 less.env = 'development';
