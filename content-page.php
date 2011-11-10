@@ -39,6 +39,7 @@
             </div>
           </div>
         </div><!-- .cols -->
+        <?php include('html/metafaq-panel.php'); ?>
       </div><!-- #content -->
     </div><!-- .offset -->
     <nav>
@@ -46,10 +47,5 @@
         <?php include('html/nav-main.php'); ?>
       </div>
     </nav>
-    <div class="wrapper clearboth bg bdr-1">
-      <div class="wrap">
-        <?php include('html/metafaq.php'); ?>
-      </div>
-    </div>
 <?php include('html/footer.php'); ?>
 <?php include('html/foot.php'); ?>
