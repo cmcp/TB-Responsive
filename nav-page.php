@@ -13,30 +13,31 @@
       </div><!-- .header -->
     </header>
     <div class="offset">
-    <div id="content" class="wrapper">
-    <div class="offset-inner">
-      <div class="sec-col">
-        <div class="split">
-          <?php section('nav2'); ?>
-          <?php section('key'); ?>
-        </div>
-      </div>
-      <div class="main-col">
-        <section>
-          <div class="section">
-            <?php section('hero'); ?>
+      <div id="content" class="wrapper">
+        <div class="offset-inner">
+          <div class="sec-col">
+            <div class="split">
+              <?php section('nav2'); ?>
+              <?php section('key'); ?>
+            </div>
           </div>
-        </section>
-        <div class="fireplace">
-          <div class="split split-70">
-            <?php section('main'); ?>
-          </div><!-- split -->
-          <div class="split split-30">
-            <?php section('supp'); ?>
-          </div><!-- .fireplace -->
-        </div>
-      </div>
-      </div>
+          <div class="main-col">
+            <section>
+              <div class="section">
+                <?php section('hero'); ?>
+              </div>
+            </section>
+            <div class="fireplace">
+              <div class="split split-70">
+                <?php section('main'); ?>
+              </div><!-- split -->
+              <div class="split split-30">
+                <?php section('supp'); ?>
+              </div><!-- .fireplace -->
+            </div>
+          </div>
+        </div><!-- .offset-inner -->
+        <?php include('html/metafaq-panel.php'); ?>
       </div><!-- #content -->
     </div><!-- .offset -->
       <nav>
