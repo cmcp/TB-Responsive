@@ -4,10 +4,10 @@
       <ul id="nav-secondary">
         <li class="active ">Travel insurance
           <ul class="sub-level">
-            <li class=" "><a tabindex="50" href="/travel/cover-options">Our cover options</a></li>
-            <li class=" divide"><a tabindex="50" href="/travel/policy-info">Policy info</a></li>
-            <li class=" "><a tabindex="50" href="/travel/apply">Get a Quote</a></li>
-            <li class=" "><a tabindex="50" href="/travel/contact-us">Contact us</a></li>
+            <li class=" "><a tabindex="50" href="/personal/finance/travel/cover-options">Our cover options</a></li>
+            <li class=" divide"><a tabindex="50" href="/personal/finance/travel/policy-info">Policy info</a></li>
+            <li class=" "><a tabindex="50" href="/personal/finance/travel/apply">Get a Quote</a></li>
+            <li class=" "><a tabindex="50" href="/personal/finance/travel/contact-us">Contact us</a></li>
           </ul>
         </li>
       </ul>
