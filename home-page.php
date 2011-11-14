@@ -15,9 +15,13 @@
     <div class="offset wide-1">
       <div class="offset-inner">
       <section>
-        <div class="section wrapper">
-          <?php include('html/4-travel.php'); ?>
-          <?php include('html/4-dental.php'); ?>
+        <div class="section columns wrapper">
+          <div class="split split-50">
+            <?php include('html/4-travel.php'); ?>
+          </div>
+          <div class="split split-50">
+            <?php include('html/4-dental.php'); ?>
+          <div>
         </div>
       </section>
       </div>

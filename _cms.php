@@ -62,7 +62,9 @@ $DCR_MAP = array(
     'nav2' => array('html/dcrs/insurance/left-nav.php'),
     'key' => array('html/1-compare.php'),
     'hero' => array('html/dcrs/insurance/3-life-hero.php'),
-    'main' => array('html/dcrs/insurance/4-pet.php', 'html/dcrs/insurance/4-home.php'),
+    '4-left' => array('html/dcrs/insurance/4-pet.php'),
+    '4-right' => array('html/dcrs/insurance/4-home.php'),
+    'hero2' => array('html/dcrs/insurance/3-life-hero.php'),
     'supp' => array(),
   ),
 
