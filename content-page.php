@@ -20,6 +20,15 @@
               <section>
                 <div class="section">
                   <?php section('hero'); ?>
+                  <div class="columns">
+                    <div class="split split-50 left">
+                      <?php section('4-left'); ?>
+                    </div>
+                    <div class="split split-50 right">
+                      <?php section('4-right'); ?>
+                    </div>
+                  </div>
+                  <?php section('hero2'); ?>
                 </div>
               </section>
               <div class="fireplace">

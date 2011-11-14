@@ -15,6 +15,19 @@ $DCR_MAP = array(
   '' => array(
     'template' => 'home-page.php',
   ),
+
+  'layouts/nav' => array (
+    'template' => 'nav-page.php',
+    'nav2' => array('html/dcrs/layout/left-nav.php'),
+    'key' => array('html/dcrs/layout/1.php'),
+    'hero' => array('html/dcrs/layout/3.php'),
+    '4-left' => array('html/dcrs/layout/4.php'),
+    '4-right' => array('html/dcrs/layout/4.php'),
+    'hero2' => array('html/dcrs/layout/3.php'),
+    'main' => array('html/dcrs/layout/2.php'),
+    'supp' => array('html/dcrs/layout/1.php'),
+  ),
+
   'personal/finance/travel/' => array (
     'template' => 'nav-page.php',
     'nav2' => array('html/dcrs/travel/left-nav.php'),
@@ -132,5 +145,5 @@ $DCR_MAP = array(
     'main' => array('html/dcrs/insurance/carins/2-contact-hero.php', 'html/dcrs/insurance/carins/2-underwriters.php', 'html/dcrs/insurance/carins/2-newquote.php'),
     'supp' => array('html/dcrs/insurance/carins/1-textphone.php', 'html/dcrs/insurance/carins/1-check-policy.php'),
   ),
-  
+
 );
