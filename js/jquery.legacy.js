@@ -271,25 +271,23 @@ else var s=p/(2*Math.PI)*Math.asin(c/a);if(t<1)return-.5*(a*Math.pow(2,10*(t-=1)
 
 //Equal sized columns
 (function($) {
-  $.fn.vjustify = function() {
-    var max_height = 0;
+  $.fn.vjustify = function(abort) {
+    var max_height = 0,
+        css_height = 'min-height',
+        css_reset = '0';
+    if (typeof document.body.style.minHeight === 'undefined') {
+      css_height = 'height';
+      css_reset = 'auto';
+    }
     this.each(function(){
-      max_height = Math.max(this.offsetHeight, max_height);
+      $(this).css(css_height, css_reset);
+      max_height = Math.max($(this).height(), max_height);
     });
-    this.each(function(){
-      var first_height = max_height + "px",
-          ver,
-          second_height,
-          css_height = 'min-height';
-      if (typeof document.body.style.maxHeight === 'undefined') {
-        css_height = 'height';
-      }
-      $(this).css(css_height, first_height);
-      if (this.offsetHeight > max_height) {
-        second_height = (max_height / -(this.offsetHeight - max_height)) + "px";
-        $(this).css(css_height, second_height);
-      }
-    });
+    if (!abort) {
+      this.each(function(){
+        $(this).css(css_height, max_height + "px");
+      });
+    }
   };
 })(jQuery);
 
@@ -308,6 +306,35 @@ var BRAND_BANK  = (function(module) {
   var Interface = function() {
     var that = this,
         load_interface = !$.browser.opera_mini && !$.browser.blackberry_old; //should we load the interface?
+
+    /**
+     * Function - show all products meny
+     * ----------------------------------------------
+     * If the all products menu is available on the page then make it available
+     * as an item on the primary nav.
+     */
+    this.allProductsMenu = function() {
+      if (!load_interface) {
+        return false;
+      }
+
+      if ($('#all-products-nav').length) {
+        var link = $('#all-products-link'),
+            nav_main = $('.nav-main'),
+            nav;
+        link.text('View all products');
+        nav_main.after('<div id="all-products-link-nav" class="nav-main">' + $('#all-products-nav').html() +'</div>');
+        nav = $('#all-products-link-nav');
+        nav.hide(1);
+        link.live('click', function() {
+          nav_main.addClass('wide-0');
+          nav.show(1).addClass('narrow-0');
+          window.scrollTo(0, nav.offset().top);
+          return false;
+        });
+      }
+    };
+
 
     /**
      * FUNCTION - Enable ARIA
@@ -466,7 +493,7 @@ var BRAND_BANK  = (function(module) {
      *
      * X is initially 1 - 10.
      */
-     this.equalHeight = function() {
+    this.equalHeight = function() {
       var i,
           els,
           max_eq = 10;
@@ -474,12 +501,12 @@ var BRAND_BANK  = (function(module) {
         return false;
       }
       for (i = 1; i <= max_eq; i += 1) {
-        els = $(".eq-" + i)
+        els = $(".eq-" + i);
         if (els.length) {
-          els.vjustify();
+          els.vjustify($(window).width() < 600); // Don't resize if viewport is too small.
         }
       }
-     };
+    };
 
     /**
      * FUNCTION - External Links
@@ -496,6 +523,31 @@ var BRAND_BANK  = (function(module) {
         $(this).attr({ title: "This link opens in a new window" }).attr("target", "_blank");
       })
     };
+
+    /**
+     * FUNCTION - Full site button
+     * ---------------------------------------------
+     * Handles the show full site button and state.
+     */
+    this.fullSite = function() {
+
+      if (!load_interface) {
+        return false;
+      }
+      $('#fullsite').html('<a class="btn" id="showfull">Show full site</a>')
+      $('#relaxsite').html('<a class="btn" id="relaxfull">Return to optimised site</a>');
+      $('#showfull').live('click', function() {
+        $('html').addClass('wide');
+        window.scrollTo(0,0);
+        docCookies.setItem('TB_fullsite', 'true');
+      });
+      $('#relaxfull').live('click', function() {
+        $('html').removeClass('wide');
+        window.scrollTo(0,0);
+        docCookies.removeItem('TB_fullsite');
+      });
+    };
+
 
 
     /**
@@ -564,7 +616,7 @@ var BRAND_BANK  = (function(module) {
      * child container and then using those headers
      * as the titles of the tabs.
      */
-    tabs = function(){
+    this.tabs = function() {
       var tabsIndex = 0,
           tabCount = 0,
           api;
@@ -664,38 +716,35 @@ var BRAND_BANK  = (function(module) {
         el.click(function(e) {
           e.preventDefault();
         });
-
       });
-
     };
 
     this.init = function() {
-      if ($(".read-more").length) {
-        that.readMore();
-      }
-      if ($('a[rel="external"]').length) {
-        that.externalLinks();
-      }
-      if ($("a.tooltip").length) {
-        that.tooltips();
-      }
-      if ($(".conditions").length) {
-        that.checklist();
-      }
-      if ($('#login .cta-left').length) {
-        that.brandInterface.cssoLogin();
-      }
+      that.allProductsMenu();
+      that.checklist();
+      that.cssoLogin();
       that.enableAria();
-      that.equalHeight();
+      that.externalLinks();
+      that.fullSite();
+      that.readMore();
+      that.tabs();
+      that.tooltips();
+      $(window).resize(that.equalHeight).trigger('resize');
     };
   };
-
 
   module.INTERFACE = new Interface();
   return module;
 
 }(BRAND_BANK || {}));
 
+
+// Skip the Nav bar on a mobile.  http://remysharp.com/2010/08/05/doing-it-right-skipping-the-iphone-url-bar/
+/mobile/i.test(navigator.userAgent) && !location.hash && setTimeout(function() {
+  if (!pageYOffset) {
+    window.scrollTo(0, 1);
+  }
+}, 1000);
 
 $(document).ready(function(){
 

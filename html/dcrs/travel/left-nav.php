@@ -1,16 +1,1 @@
-<nav>
-  <div class="panel type-1 bdr-1 bg cnr nav">
-    <div class="wrap">
-      <ul id="nav-secondary">
-        <li class="active ">Travel insurance
-          <ul class="sub-level">
-            <li class=" "><a tabindex="50" href="/personal/finance/travel/cover-options">Our cover options</a></li>
-            <li class=" divide"><a tabindex="50" href="/personal/finance/travel/policy-info">Policy info</a></li>
-            <li class=" "><a tabindex="50" href="/personal/finance/travel/apply">Get a Quote</a></li>
-            <li class=" "><a tabindex="50" href="/personal/finance/travel/contact-us">Contact us</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<div class="panel type-1 bdr-1 bg cnr nav"><div class="wrap"><ul id="nav-secondary"><li class="active ">Travel<ul class="sub-level"><li class=" "><a shape="rect" href="/personal/finance/travel/travelmoney/index.html">Travel Money</a></li><li class=" "><a shape="rect" href="/personal/finance/insurance/travelins/index.html">Travel insurance</a></li><li class=" "><a shape="rect" href="/personal/finance/insurance/breakdown/euro-breakdown-cover.html">Euro breakdown cover</a></li><li class=" "><a shape="rect" href="/personal/finance/insurance/petins/index.html">Insuring your pet abroad</a></li><li class=" "><a shape="rect" href="/personal/finance/travel/travel-card/index.html">Travel money card</a></li></ul></li></ul></div></div>

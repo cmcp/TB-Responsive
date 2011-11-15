@@ -195,37 +195,43 @@ $DCR_MAP = array(
   'personal/finance/travel/' => array (
     'template' => 'nav-page.php',
     'nav2' => array('html/dcrs/travel/left-nav.php'),
-    'key' => array('html/dcrs/travel/1-existing-customer.php', 'html/dcrs/travel/1-retrieve-quote.php', ),
-    'hero' => array('html/dcrs/travel/3-hero.php'),
-    'main' => array('html/dcrs/travel/2-what-do-i-get.php'),
-    'supp' => array('html/dcrs/travel/1-call-for-quote.php', 'html/dcrs/travel/1-elh.php'),
+    '4-left' => array('html/dcrs/travel/4-travel-money.php', 'html/dcrs/travel/4-euro-breakdown.php'),
+    '4-right' => array('html/dcrs/travel/4-travel-insurance.php', 'html/dcrs/travel/4-travel-pet.php'),
   ),
-  'personal/finance/travel/policy-info' => array (
-    'template' => 'content-page.php',
-    'nav2' => array('html/dcrs/travel/left-nav.php'),
-    'key' => array('html/dcrs/travel/1-existing-customer.php'),
-    'hero' => array('html/dcrs/travel/3-existing-policy.php'),
-    'main' => array('html/dcrs/travel/2-underwiters.php'),
-    'supp' => array('html/dcrs/travel/1-elh.php'),
+  'personal/finance/insurance/travelins/index.html' => array (
+    'template' => 'nav-page.php',
+    'nav2' => array('html/dcrs/insurance/travelins/left-nav.php'),
+    'key' => array('html/dcrs/insurance/travelins/1-existing-customer.php', 'html/dcrs/insurance/travelins/1-retrieve-quote.php', ),
+    'hero' => array('html/dcrs/insurance/travelins/3-hero.php'),
+    'main' => array('html/dcrs/insurance/travelins/2-what-do-i-get.php'),
+    'supp' => array('html/dcrs/insurance/travelins/1-call-for-quote.php', 'html/dcrs/insurance/travelins/1-elh.php'),
   ),
-  'personal/finance/travel/contact-us' => array (
+  'personal/finance/insurance/travelins/policy-info.html' => array (
     'template' => 'content-page.php',
-    'nav2' => array('html/dcrs/travel/left-nav.php'),
-    'key' => array('html/dcrs/travel/1-typetalk.php'),
-    'main' => array('html/dcrs/travel/2-contact.php', 'html/dcrs/travel/2-numbers.php'),
-    'supp' => array('html/dcrs/travel/1-elh.php'),
+    'nav2' => array('html/dcrs/insurance/travelins/left-nav.php'),
+    'key' => array('html/dcrs/insurance/travelins/1-existing-customer.php'),
+    'hero' => array('html/dcrs/insurance/travelins/3-existing-policy.php'),
+    'main' => array('html/dcrs/insurance/travelins/2-underwiters.php'),
+    'supp' => array('html/dcrs/insurance/travelins/1-elh.php'),
   ),
-  'personal/finance/travel/cover-options' => array (
+  'personal/finance/insurance/travelins/contact.html' => array (
     'template' => 'content-page.php',
-    'nav2' => array('html/dcrs/travel/left-nav.php'),
-    'hero' => array('html/dcrs/travel/3-cover-options.php', 'html/dcrs/travel/3-covered.php'),
+    'nav2' => array('html/dcrs/insurance/travelins/left-nav.php'),
+    'key' => array('html/dcrs/insurance/travelins/1-typetalk.php'),
+    'main' => array('html/dcrs/insurance/travelins/2-contact.php', 'html/dcrs/insurance/travelins/2-numbers.php'),
+    'supp' => array('html/dcrs/insurance/travelins/1-elh.php'),
   ),
-  'personal/finance/travel/apply' => array (
+  'personal/finance/insurance/travelins/cover-options.html' => array (
     'template' => 'content-page.php',
-    'nav2' => array('html/dcrs/travel/left-nav.php'),
-    'key' => array('html/dcrs/travel/1-call-for-quote.php', 'html/dcrs/travel/1-retrieve-quote.php', 'html/dcrs/travel/1-existing-customer.php'),
-    'main' => array('html/dcrs/travel/2-quote.php', 'html/dcrs/travel/2-apply-info.php', 'html/dcrs/travel/2-important-info.php'),
-    'supp' => array('html/dcrs/travel/1-elh.php'),
+    'nav2' => array('html/dcrs/insurance/travelins/left-nav.php'),
+    'hero' => array('html/dcrs/insurance/travelins/3-cover-options.php', 'html/dcrs/insurance/travelins/3-covered.php'),
+  ),
+  'personal/finance/insurance/travelins/apply.html' => array (
+    'template' => 'content-page.php',
+    'nav2' => array('html/dcrs/insurance/travelins/left-nav.php'),
+    'key' => array('html/dcrs/insurance/travelins/1-call-for-quote.php', 'html/dcrs/insurance/travelins/1-retrieve-quote.php', 'html/dcrs/insurance/travelins/1-existing-customer.php'),
+    'main' => array('html/dcrs/insurance/travelins/2-quote.php', 'html/dcrs/insurance/travelins/2-apply-info.php', 'html/dcrs/insurance/travelins/2-important-info.php'),
+    'supp' => array('html/dcrs/insurance/travelins/1-elh.php'),
   ),
 
 

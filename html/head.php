@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <script>
 document.getElementsByTagName('html')[0].className += ' js';
-if ('ontouchstart' in window) {
+if (window.ontouchstart) {
   document.getElementsByTagName('html')[0].className += ' touch';
 }
   </script>
