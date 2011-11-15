@@ -1,4 +1,4 @@
-﻿var BANKING_OUTAGE = false, 
+﻿var BANKING_OUTAGE = false,
     sitracker;
 
 /*----------------- 1. Global variables for IE mac detection -----------------------------*/
@@ -239,31 +239,59 @@ else var s=p/(2*Math.PI)*Math.asin(c/a);return a*Math.pow(2,-10*t)*Math.sin((t*d
 else var s=p/(2*Math.PI)*Math.asin(c/a);if(t<1)return-.5*(a*Math.pow(2,10*(t-=1))*Math.sin((t*d-s)*(2*Math.PI)/p))+b;return a*Math.pow(2,-10*(t-=1))*Math.sin((t*d-s)*(2*Math.PI)/p)*.5+c+b;},easeInBack:function(x,t,b,c,d,s){if(s==undefined)s=1.70158;return c*(t/=d)*t*((s+1)*t-s)+b;},easeOutBack:function(x,t,b,c,d,s){if(s==undefined)s=1.70158;return c*((t=t/d-1)*t*((s+1)*t+s)+1)+b;},easeInOutBack:function(x,t,b,c,d,s){if(s==undefined)s=1.70158;if((t/=d/2)<1)return c/2*(t*t*(((s*=(1.525))+1)*t-s))+b;return c/2*((t-=2)*t*(((s*=(1.525))+1)*t+s)+2)+b;},easeInBounce:function(x,t,b,c,d){return c-jQuery.easing.easeOutBounce(x,d-t,0,c,d)+b;},easeOutBounce:function(x,t,b,c,d){if((t/=d)<(1/2.75)){return c*(7.5625*t*t)+b;}else if(t<(2/2.75)){return c*(7.5625*(t-=(1.5/2.75))*t+.75)+b;}else if(t<(2.5/2.75)){return c*(7.5625*(t-=(2.25/2.75))*t+.9375)+b;}else{return c*(7.5625*(t-=(2.625/2.75))*t+.984375)+b;}},easeInOutBounce:function(x,t,b,c,d){if(t<d/2)return jQuery.easing.easeInBounce(x,t*2,0,c,d)*.5+b;return jQuery.easing.easeOutBounce(x,t*2-d,0,c,d)*.5+c*.5+b;}});
 
 
-// User Agent Sniffing for Arcot.
+// User Agent Sniffing - use with caution!
 (function($) {
-	var user_agent = navigator.userAgent.toLowerCase(),
-	    version = (user_agent.match(/.+(?:rv|it|ra|ie)[\/: ](\d+\.\d+)/) || [0,'0'])[1];
-	if (/firefox/.test(user_agent)) {
-		version = (user_agent.match(/Firefox\/(\d+\.\d+)/) || [0,'0'])[1];
-	}
-	version = parseFloat(version);
-	if (isNaN(version)) {
-		version = 0;
-	}
-	//WARNING: Version is known to be buggy.  Try and avoid using it.
-	$.browser = {
-		'version': version,
-		'chrome': /chrome/.test(user_agent),
-		'firefox': /firefox/.test(user_agent),
-		'mozilla': /mozilla/.test(user_agent) && !/(compatible|webkit)/.test(user_agent),
-		'msie': /msie/.test(user_agent) && !/opera/.test(user_agent ),
-		'opera': /opera/.test(user_agent),
-		'safari': /safari/.test(user_agent) && !/(chrome|android)/.test(user_agent),
-		'webkit': /webkit/.test(user_agent),
-		'ios': /(ipad)|(iphone)|(ipod)/.test(user_agent)
-	};
+  var user_agent = navigator.userAgent.toLowerCase(),
+      version = (user_agent.match(/.+(?:rv|it|ra|ie)[\/: ](\d+\.\d+)/) || [0,'0'])[1];
+  if (/firefox/.test(user_agent)) {
+    version = (user_agent.match(/Firefox\/(\d+\.\d+)/) || [0,'0'])[1];
+  }
+  version = parseFloat(version);
+  if (isNaN(version)) {
+    version = 0;
+  }
+  //WARNING: Version is known to be buggy.  Try and avoid using it.
+  $.browser = {
+    'version': version,
+    'chrome': /chrome/.test(user_agent),
+    'firefox': /firefox/.test(user_agent),
+    'mozilla': /mozilla/.test(user_agent) && !/(compatible|webkit)/.test(user_agent),
+    'msie': /msie/.test(user_agent) && !/opera/.test(user_agent ),
+    'opera': /opera/.test(user_agent),
+    'opera_mini': /opera mini/.test(user_agent),
+    'safari': /safari/.test(user_agent) && !/(chrome|android)/.test(user_agent),
+    'webkit': /webkit/.test(user_agent),
+    'ios': /(ipad)|(iphone)|(ipod)/.test(user_agent),
+    'android': /android/.test(user_agent),
+    'blackberry': /blackberry/.test(user_agent),
+    'blackberry_old': /blackberry/.test(user_agent) && !/webkit/.test(user_agent)
+  };
 })(jQuery);
 
+
+//Equal sized columns
+(function($) {
+  $.fn.vjustify = function() {
+    var max_height = 0;
+    this.each(function(){
+      max_height = Math.max(this.offsetHeight, max_height);
+    });
+    this.each(function(){
+      var first_height = max_height + "px",
+          ver,
+          second_height,
+          css_height = 'min-height';
+      if (typeof document.body.style.maxHeight === 'undefined') {
+        css_height = 'height';
+      }
+      $(this).css(css_height, first_height);
+      if (this.offsetHeight > max_height) {
+        second_height = (max_height / -(this.offsetHeight - max_height)) + "px";
+        $(this).css(css_height, second_height);
+      }
+    });
+  };
+})(jQuery);
 
 /* FIX - Background Flicker IE 6
 --------------------------------------------- */
@@ -275,583 +303,399 @@ Contains all interface related functions which
 can be accessed via brandInterface.functionName();
 */
 
+var BRAND_BANK  = (function(module) {
 
-var brandInterface = {
+  var Interface = function() {
+    var that = this,
+        load_interface = !$.browser.opera_mini && !$.browser.blackberry_old; //should we load the interface?
 
-	/* FUNCTION - External Links
-	---------------------------------------------
-	Looks for rel="external" on links and then
-	adds an opens in new window message and attaches
-	a click event to launch new window.
-	*/
+    /**
+     * FUNCTION - Enable ARIA
+     * ---------------------------------------------
+     * This function is in place to augment the
+     * user interface with ARIA roles, landmarks
+     * and states to improve accessibility
+     */
 
-	externalLinks: function(){
-		$('a[rel="external"]').each(function(){
-			if ( !$(this).children('img').length) {
-			}
-			$(this).attr({ title: "This link opens in a new window" }).attr("target", "_blank");
-		})
-	},
+    this.enableAria = function(){
+      if (!load_interface) {
+        return false;
+      }
+      $("#metafaq").attr("role", "search");
+      $("#nav-primary, #nav-secondary, #nav-elh").attr("role", "navigation");
+      $("#content").attr("role", "main");
+    };
 
-	externalLinksOverlay: function() {
-		$('#ajax a[rel="external"]').each(function(){
-			if ( !$(this).children('img').length) {
-			}
-			$(this).attr({ title: "This link opens in a new window" }).attr("target", "_blank");
-		})
-	},
+    /**
+     * FUNCTION -Initiate Checklist
+     * ---------------------------------------------
+     * Creates a checkbox list for standard list items
+     * and disables the continue button until all
+     * checkboxes are selected.
+     */
+    this.checklist = function(){
+      var termsCount = 1;
 
+      if (!load_interface) {
+        return false;
+      }
 
-	/* FUNCTION - Read More Buttons
-	---------------------------------------------
-	Adds read more button and close button to read
-	more areas in the event that javascript is enabled.
-	*/
-
-	readMore: function() {
-
-		$(".read-more, .rmc").each(function(){
-			$(this).attr("tabindex", "-1");
-		});
-
-		$(".rmc").wrapInner('<div class="inner"></div>'); //
-
-		var btnOpen = '<a href="#" class="btn toggle btn-read-more">Read More</a>';
-		var btnClose = '<a href="#" class="btn toggle btn-close">Close</a>';
-
-		// Insert toggle buttons
-		$(".read-more h3").after( btnOpen );
-		$(".read-more").append( btnClose );
-		$(".read-more .btn-close").hide();
-
-		// Add headings & Toggle
-		$(".read-more .toggle").each(function(){
-
-			// Add relevant alt text (taken from heading) to open and close buttons
-			//var hContent = $(this).siblings('h3').text();
-			//var aContent = $("img",this).attr("alt") +  " - " + hContent;
-			//$("img",this).attr("alt", aContent);
-
-			// On click do stuff
-			$(this).click(function(e){
-
-				if ($(this).hasClass("btn-read-more")){
-
-					$(this).siblings(".rmc").animate({ height: "show" }, 750, "easeInOutQuint").focus().css("outline", "none");
-					$(this).siblings(".btn-close").toggle();
-					$(this).toggle();
-					e.preventDefault();
-
-				} else if ($(this).hasClass("btn-close")) {
-
-					$(this).siblings(".rmc").animate({ height: "hide" }, 750, "easeInOutQuint");
-					$(this).siblings(".btn-read-more").toggle();
-					$(this).toggle();
-					$(this).closest(".read-more").focus().css("outline", "none");
-					e.preventDefault();
-
-				}
-
-			});
-
-		});
-
-	},
-
-	brandTooltips: function() {
-
-		/* TOOL TIPS
-		---------------------------------------------
-		Creates tool tips out of footnotes on each page */
-		$("a.tooltip").each(function(){
-
-			$(this).after("<img src=\"\" alt=\"\" class=\"sprite icon-tooltip\" />");
-
-			var el = $(this);
-			var target = $(this).attr("href");
-
-			$(target).wrapInner("<div></div>"); // Wrap tooltip contents for style purposes
-
-			el.tooltip({
-				relative: 'true',
-				events: {
-					def:	"mouseover focus,mouseout blur",
-					input:	"focus,blur",
-					widget:	"focus mouseover,blur mouseout",
-					tooltip:"mouseover,mouseout"
-				},
-				position: "top right",
-				offset: [0, -80],
-				tip: el.attr("href")
-			})
-			.dynamic({
-				// customized configuration on bottom edge
-				bottom: {
-					offset: [0, -80],
-					direction: 'down'
-				}
-			});
-
-			$(this).click(function(e){
-				e.preventDefault();
-			});
-
-		});
-
-	},
-
-	brandTabs: function(){
-
-    /* TABS
-    ---------------------------------------------
-    Creates a tabbed interface out of content on the page.
-
-    This is aceived by looking for
-    class="panes", checking the headings in the
-    child container and then using those headers
-    as the titles of the tabs.
-    */
-
-    var tabsIndex = 0, tabCount = 0;
-    
-    $('.panes').css('display', 'inherit');
-    if ($(window).width() < 768) {
-
-      $(".panes").each(function(){
-        tabsIndex += 1;
-        tabCount = 0;
-        $('.panel', this).each(function() {
-          tabCount += 1;
-          var heading = $('h2:first', this).remove();
-          heading.attr('id', 'tab-' + tabsIndex + ':' + tabCount);
-          $(this).before(heading);
-        });
+      $(".decision .next img").each(function(){
+        $(this).removeClass("continue");
+        $(this).addClass("continue-disabled");
       });
-      var api = $('.panes').tabs('.panes div.panel', {tabs: 'h2', effect: 'slide', initialIndex: 999,
-        onClick: function(event, index) {
-          //console.log(this.getCurrentTab().offset());
-          $(document).scrollTop(this.getCurrentTab().offset()['top']);
+
+      // Create checkbox list items
+      $(".convert li").each(function(termsCount){
+        var termsId = "item" + termsCount;
+        $(this).wrapInner("<label></label>");
+        $("label",this).attr("for",termsId);
+        $("label",this).prepend('<input type="checkbox" class="required" />');
+        $('input[type="checkbox"]',this).attr("id", termsId);
+        termsCount++;
+      });
+
+      // Show checkboxes
+      $(".convert").show();
+
+      // Validate checkboxes
+      $(".required").live("click",function(event){
+        var checkedList = $(".required:checked"),
+            requiredList = $(".required");
+
+        if (checkedList.length < requiredList.length) {
+          $(".next img")
+          .removeClass("continue")
+          .addClass("continue-disabled");
+          $("#warning").show();
+          $("#success").hide();
+        } else {
+          $(".next img")
+          .removeClass("continue-disabled")
+          .addClass("continue");
+          $("#warning").hide();
+          $("#success").show();
+
         }
       });
-    } else {
-      $('.panes').each(function(){
-        tabsIndex += 1;
+    };
 
-        // Create list with unique id
-        $(this).prepend('<ul class="tabs" id="tabs-' + tabsIndex + '"></ul>');
+    /**
+     * FUNCTION - CSSO Login
+     * ---------------------------------------------
+     * CSSO login dropdown box
+     */
+    this.cssoLogin = function() {
 
-        // For each panel heading create a tab and append it to the list
-        $(this).find(".panel h2").each(function() {
-          var tabTitle = $(this).text();
+      // Create drop down & login buttons
+      var dropDown = '<select name="csso-login" id="csso-login">' +
+              '<option value="">Select product to login</option>' +
+              '<option value="s">Savings</option>' +
+              '<option value="l">Loans</option>' +
+              '<option value="cc">Credit Cards</option>' +
+              '<option value="bcc">Business Credit Cards</option>' +
+          '</select>' +
+          '<p>New User?</p>'+
+          '<ul class="actions">' +
+              '<li><a href="#" id="register-button"><img src="/assets/sections/servicing/img/btn-register-small.png" alt="Register" width="78" height="21" /></a></li>' +
+              '<li><a href="#" id="login-button"><img src="/assets/sections/servicing/img/btn-login.png" alt="Login" width="61" height="21" /></a></li>' +
+          '</ul>';
 
-          tabCount += 1;
+      if (!load_interface) {
+        return false;
+      }
 
-          $("#tabs-" + tabsIndex).append('<li><a href="#tab' + tabCount + '">' +  tabTitle + '</a><div></div></li>');
+      $("#login .cta-left").prepend(dropDown);
 
-          $(this).css({ "position" : "absolute", "left" : "-9999px" });
+      $("#csso-login").live("change ready blur", function(){
 
+          // Get value from drop down
+          var product = $("#csso-login").val();
+
+          // Source link lists
+          var rLinks = $("#reg-links");
+          var lLinks = $("#login-links");
+
+          // Identify Buttons
+          var reg = $("#register-button");
+          var login = $("#login-button");
+
+          // Set button urls
+          function loginDestination(prod,rb,lb,r,l) {
+              var login_href, register_href;
+              if (prod == '') {
+                  rb.attr('href', '#');
+                  lb.attr('href', '#');
+              } else {
+                  login_href = $('a.' + prod, l).attr('href');
+                  register_href = $('a.' + prod, r).attr('href');
+                  if (BANKING_OUTAGE) {
+                    if (prod == 's' || prod == 'l') {
+                        register_href = '/personal/finance/servicing/outage/banking-registration.html';
+                    }
+                  }
+                  if ($.browser.ios) {
+                    if (prod == 's' || prod == 'l') {
+                      register_href = 'http://www.brandbank.com/personal/finance/servicing/messages/arcot-ios.html';
+                    }
+                  }
+                  rb.attr('href', register_href);
+                  lb.attr('href', login_href);
+              }
+
+          }
+          loginDestination(product,reg,login,rLinks,lLinks);
+      });
+      $("#csso-login").trigger("ready"); // Beat IE7 with a clue-by-four.
+      $("#register-button").live("click", function(){
+          if ( $("#register-button").attr("href") == "#" ) {
+              alert("Please select a product to login or register...");
+          }
+      });
+     $("#login-button").live("click", function(){
+          if ( $("#login-button").attr("href") == "#" ) {
+              alert("Please select a product to login or register...");
+          }
+      });
+    };
+
+    /**
+     * FUNCTION - Vertical equal heights
+     * ----------------------------------------------
+     * Sets items with the eq-X class to be the same height.
+     *
+     * X is initially 1 - 10.
+     */
+     this.equalHeight = function() {
+      var i,
+          els,
+          max_eq = 10;
+      if (!load_interface) {
+        return false;
+      }
+      for (i = 1; i <= 10; i += 1) {
+        els = $(".eq-" + i)
+        if (els.length) {
+          els.vjustify();
+        }
+      }
+     };
+
+    /**
+     * FUNCTION - External Links
+     * ---------------------------------------------
+     * Looks for rel="external" on links and then
+     * adds an opens in new window message and attaches
+     * a click event to launch new window.
+     */
+    this.externalLinks = function(){
+      if (!load_interface) {
+        return false;
+      }
+      $('a[rel="external"]').each(function(){
+        $(this).attr({ title: "This link opens in a new window" }).attr("target", "_blank");
+      })
+    };
+
+
+    /**
+     * FUNCTION - Read More Buttons
+     * ---------------------------------------------
+     * Adds read more button and close button to read
+     * more areas in the event that javascript is enabled.
+     */
+    this.readMore = function() {
+      var btnOpen = '<a href="#" class="btn toggle btn-read-more">Read More</a>',
+          btnClose = '<a href="#" class="btn toggle btn-close">Close</a>';
+
+      if (!load_interface) {
+        return false;
+      }
+
+      $(".read-more, .rmc").each(function(){
+        $(this).attr("tabindex", "-1");
+      });
+
+      $(".rmc").wrapInner('<div class="inner"></div>');
+
+      // Insert toggle buttons
+      $(".read-more h3").after( btnOpen );
+      $(".read-more").append( btnClose );
+      $(".read-more .btn-close").hide();
+
+      // Add headings & Toggle
+      $(".read-more .toggle").each(function(){
+
+        // Add relevant alt text (taken from heading) to open and close buttons
+        //var hContent = $(this).siblings('h3').text();
+        //var aContent = $("img",this).attr("alt") +  " - " + hContent;
+        //$("img",this).attr("alt", aContent);
+
+        // On click do stuff
+        $(this).click(function(e){
+
+          if ($(this).hasClass("btn-read-more")){
+
+            $(this).siblings(".rmc").animate({ height: "show" }, 750, "easeInOutQuint").focus().css("outline", "none");
+            $(this).siblings(".btn-close").toggle();
+            $(this).toggle();
+            e.preventDefault();
+
+          } else if ($(this).hasClass("btn-close")) {
+
+            $(this).siblings(".rmc").animate({ height: "hide" }, 750, "easeInOutQuint");
+            $(this).siblings(".btn-read-more").toggle();
+            $(this).toggle();
+            $(this).closest(".read-more").focus().css("outline", "none");
+            e.preventDefault();
+
+          }
+        });
+      });
+    };
+
+    /**
+     * TABS
+     * ---------------------------------------------
+     * Creates a tabbed interface out of content on the page.
+     *
+     * This is aceived by looking for
+     * class="panes", checking the headings in the
+     * child container and then using those headers
+     * as the titles of the tabs.
+     */
+    tabs = function(){
+      var tabsIndex = 0,
+          tabCount = 0,
+          api;
+
+      if (!load_interface) {
+        return false;
+      }
+
+      $('.panes').css('display', 'inherit');
+
+      if ($(window).width() < 768) {
+        $(".panes").each(function(){
+          var heading;
+          tabsIndex += 1;
+          tabCount = 0;
+          $('.panel', this).each(function() {
+            tabCount += 1;
+            heading = $('h2:first', this).remove();
+            heading.attr('id', 'tab-' + tabsIndex + ':' + tabCount);
+            $(this).before(heading);
+          });
+        });
+        api = $('.panes').tabs('.panes div.panel', {
+          tabs: 'h2',
+          effect: 'slide',
+          initialIndex: 999,
+          onClick: function(event, index) {
+            $(document).scrollTop(this.getCurrentTab().offset()['top']);
+          }
+        });
+      } else {
+        $('.panes').each(function(){
+          tabsIndex += 1;
+
+          // Create list with unique id
+          $(this).prepend('<ul class="tabs" id="tabs-' + tabsIndex + '"></ul>');
+
+          // For each panel heading create a tab and append it to the list
+          $(this).find(".panel h2").each(function() {
+            var tabTitle = $(this).text();
+            tabCount += 1;
+            $("#tabs-" + tabsIndex).append('<li><a href="#tab' + tabCount + '">' +  tabTitle + '</a><div></div></li>');
+            $(this).css({ "position" : "absolute", "left" : "-9999px" });
+          });
+
+          $("#tabs-" + tabsIndex + " li a").each(function() {
+            var myW = $(this).width(),
+                newW = myW + 5;
+            $(this).width(newW);
+            $(this).next("div").width(newW);
+          });
+        });
+      }
+
+      //initiate tabs
+      $("ul.tabs").tabs("div.panes > div.panel", {
+        tabs: 'li'
+      });
+    };
+
+    /**
+     * TOOL TIPS
+     * ---------------------------------------------
+     * Creates tool tips out of footnotes on each page
+     */
+    this.tooltips = function() {
+      if (!load_interface) {
+        return false;
+      }
+      $("a.tooltip").each(function(){
+        var el = $(this),
+            target = el.attr("href");
+
+        el.after("<img src=\"\" alt=\"\" class=\"sprite icon-tooltip\" />");
+        $(target).wrapInner("<div></div>"); // Wrap tooltip contents for style purposes
+
+        el.tooltip({
+          relative: 'true',
+          events: {
+            def: "mouseover focus,mouseout blur",
+            input: "focus,blur",
+            widget: "focus mouseover,blur mouseout",
+            tooltip: "mouseover,mouseout"
+          },
+          position: "top right",
+          offset: [0, -80],
+          tip: el.attr("href")
+        })
+        .dynamic({
+          // customized configuration on bottom edge
+          bottom: {
+            offset: [0, -80],
+            direction: 'down'
+          }
         });
 
-        $("#tabs-" + tabsIndex + " li a").each(function() {
-          var myW = $(this).width(),
-              newW = myW + 5;
-
-          $(this).width(newW);
-          $(this).next("div").width(newW);
+        el.click(function(e) {
+          e.preventDefault();
         });
-        
 
       });
-    }
 
-    //initiate tabs
-    $("ul.tabs").tabs("div.panes > div.panel", {
-      tabs: 'li'
-    });
+    };
+
+    this.init = function() {
+      if ($(".read-more").length) {
+        that.readMore();
+      }
+      if ($('a[rel="external"]').length) {
+        that.externalLinks();
+      }
+      if ($("a.tooltip").length) {
+        that.tooltips();
+      }
+      if ($(".conditions").length) {
+        that.checklist();
+      }
+      if ($('#login .cta-left').length) {
+        that.brandInterface.cssoLogin();
+      }
+      that.enableAria();
+      that.equalHeight();
+    };
+  };
+
+
+  module.INTERFACE = new Interface();
+  return module;
+
+}(BRAND_BANK || {}));
 
-  },
-
-	brandOverlays: function(){
-    return; // Overlays are disabled.
-
-		// Overlays don't work properly with small viewports so, if we don't have space, we cowardly abdicate at this point.
-		if ($(window).height() < 598 || $(window).width() < 558) {
-			return;
-		}
-
-		$.ajaxSetup ({
-			// Enable caching of AJAX responses to avoid extra load on Portal as it treats GET query strings as unique pages. */
-			cache: true
-		});
-
-
-		/* OVERLAYS
-		---------------------------------------------
-		Creates an overlay on the page which calls
-		an external page using AJAX and loads it into
-		the overlay. */
-
-		if ($("a[rel='#overlay']").length) {
-			$("body").append("<div class=\"overlay\" id=\"overlay\"><div class=\"contentWrap\"></div></div>");
-		}
-
-		if ($("a[rel='#prescreen']").length) {
-			$("body").append("<div class=\"overlay\" id=\"prescreen\"><div class=\"contentWrap\"></div></div>");
-		}
-
-		// Standard Overlay
-		$("a[rel='#overlay']").overlay({
-
-			expose: '#666',
-			speed: 'fast',
-			//close: 'div.close',
-			onBeforeLoad: function() {
-
-				// grab wrapper element inside content
-				var wrap = this.getOverlay().find(".contentWrap");
-				var page = this.getTrigger().attr("href");
-				var self = this;
-
-				// load the page specified in the trigger
-				wrap.load(page + ' #ajax', function(){
-
-					brandInterface.externalLinksOverlay();
-
-				});
-
-			},
-
-			onLoad: function() {
-				$("#metafaq select").hide();
-			},
-
-			onClose: function() {
-				$("#metafaq select").show();
-				this.getOverlay().find(".contentWrap").empty(); // Kill the current content to prevent it showing when re-opened.
-			}
-
-		});
-
-		// Pre-Screen Overlay
-		$("a[rel='#prescreen']").overlay({
-
-			expose: '#666',
-			speed: 'fast',
-			closeOnClick: false,
-			close: 'a.close',
-		 	onBeforeLoad: function() {
-
-				var wrap = this.getOverlay().find(".contentWrap");
-				var page = this.getTrigger().attr("href");
-
-				// AJAX Call
-				wrap.load(page + ' #ajax', function(){
-
-					$("a.close").click(function(e){
-
-						// Close overlay
-						$("a[rel='#prescreen']").each(function() {
-							wrap.html();
-							$(this).overlay().close();
-						});
-
-						// Get clicked url
-						var tmpUrl = $(this).attr("href");
-
-						// Unless it has an anchor, prevent default
-						if ( tmpUrl.indexOf("#") == -1 ) {
-							e.preventDefault();
-						}
-
-					});
-
-					brandInterface.externalLinksOverlay();
-					//brandInterface.initiateChecklist();
-
-				});
-
-			},
-
-			onLoad: function() {
-				$("#metafaq select").hide();
-			},
-			onClose: function() {
-				$("#metafaq select").show();
-				this.getOverlay().find(".contentWrap").empty(); // Kill the current content to prevent it showing when re-opened.
-			}
-
-		});
-
-	},
-
-
-	/* FUNCTION -Initiate Checklist
-	---------------------------------------------
-	Creates a checkbox list for standard list items
-	and disables the continue button until all
-	checkboxes are selected.
-	*/
-	initiateChecklist: function(){
-
-		$(".decision .next img").each(function(){
-			$(this).removeClass("continue");
-			$(this).addClass("continue-disabled");
-		});
-
-		var termsCount = 1;
-
-		// Create checkbox list items
-		$(".convert li").each(function(termsCount){
-			var termsId = "item" + termsCount;
-			$(this).wrapInner("<label></label>");
-			$("label",this).attr("for",termsId);
-			$("label",this).prepend('<input type="checkbox" class="required" />');
-			$('input[type="checkbox"]',this).attr("id", termsId);
-			termsCount++;
-		});
-
-		// Show checkboxes
-		$(".convert").show();
-
-		// Validate checkboxes
-		$(".required").live("click",function(event){
-
-			var checkedList = $(".required:checked");
-			var requiredList = $(".required");
-
-			if (checkedList.length < requiredList.length) {
-
-				$(".next img")
-				.removeClass("continue")
-				.addClass("continue-disabled");
-				$("#warning").show();
-				$("#success").hide();
-
-
-
-			} else {
-
-				$(".next img")
-				.removeClass("continue-disabled")
-				.addClass("continue");
-				$("#warning").hide();
-				$("#success").show();
-
-			}
-
-		});
-
-	},
-
-
-	/* FUNCTION -Social Bookmarking
-	---------------------------------------------
-	Creates submission links for various for
-	various popular bookmarking sites
-	*/
-
-	socialBookmarks: function(){
-
-		$("#social p a").each(function(){
-			var titleAttr = $(this).attr("title");
-			var newAttr = titleAttr + " (New window)";
-			$(this).attr("title", newAttr);
-		}).click(function(e){
-			var thisLink = $(this).attr("href");
-			window.open(thisLink);
-			return false;
-		});
-
-		$("#social ul a").each(function(){
-			var titleAttr = $(this).attr("title");
-			var newAttr = titleAttr + " (New window)";
-			$(this).attr("title", newAttr);
-		});
-
-		$("#social ul a").click(function (event) {
-
-			/* Bookmarking Function -  */
-			var bm = $("title").text();
-			var thisUrl = encodeURIComponent(location.href); // Current URL
-			var destUrl = $(this).attr("href");  // Get destination bookmark site from clicked link
-			// Construct submission URL (subUrl) based on bookmark site
-			if (destUrl == "http://www.newsvine.com/_tools/seed"){ var subUrl = destUrl + '?u=' + thisUrl + '&h=' + bm; }
-			else if (destUrl == "http://www.stumbleupon.com") { var subUrl = destUrl + '/submit?url=' + thisUrl + '&title=' + bm; }
-			else if (destUrl == "http://www.facebook.com/sharer.php") { var subUrl = destUrl + '?u=' + thisUrl + '&=' + bm; }
-			else { var subUrl = destUrl + '?url=' + thisUrl + '&title=' + bm; };
-			window.open(subUrl);
-			return false;
-
-		});
-
-	},
-
-    /* FUNCTION - CSSO Login
-	---------------------------------------------
-	CSSO login dropdown box
-	*/
-	cssoLogin: function() {
-
-		// Create drop down & login buttons
-		var dropDown = '<select name="csso-login" id="csso-login">' +
-						'<option value="">Select product to login</option>' +
-						'<option value="s">Savings</option>' +
-						'<option value="l">Loans</option>' +
-						'<option value="cc">Credit Cards</option>' +
-						'<option value="bcc">Business Credit Cards</option>' +
-				'</select>' +
-				'<p>New User?</p>'+
-				'<ul class="actions">' +
-						'<li><a href="#" id="register-button"><img src="/assets/sections/servicing/img/btn-register-small.png" alt="Register" width="78" height="21" /></a></li>' +
-						'<li><a href="#" id="login-button"><img src="/assets/sections/servicing/img/btn-login.png" alt="Login" width="61" height="21" /></a></li>' +
-				'</ul>';
-
-		$("#login .cta-left").prepend(dropDown);
-
-		$("#csso-login").live("change ready blur", function(){
-
-				// Get value from drop down
-				var product = $("#csso-login").val();
-
-				// Source link lists
-				var rLinks = $("#reg-links");
-				var lLinks = $("#login-links");
-
-				// Identify Buttons
-				var reg = $("#register-button");
-				var login = $("#login-button");
-
-				// Set button urls
-				function loginDestination(prod,rb,lb,r,l) {
-						var login_href, register_href;
-						if (prod == '') {
-								rb.attr('href', '#');
-								lb.attr('href', '#');
-						} else {
-								login_href = $('a.' + prod, l).attr('href');
-								register_href = $('a.' + prod, r).attr('href');
-								if (BANKING_OUTAGE) {
-									if (prod == 's' || prod == 'l') {
-											register_href = '/personal/finance/servicing/outage/banking-registration.html';
-									}
-								}
-								if ($.browser.ios) {
-									if (prod == 's' || prod == 'l') {
-										register_href = 'http://www.brandbank.com/personal/finance/servicing/messages/arcot-ios.html';
-									}
-								}
-								rb.attr('href', register_href);
-								lb.attr('href', login_href);
-						}
-
-				}
-
-				loginDestination(product,reg,login,rLinks,lLinks);
-
-		});
-		$("#csso-login").trigger("ready"); // Beat IE7 with a clue-by-four.
-
-		$("#register-button").live("click", function(){
-				if ( $("#register-button").attr("href") == "#" ) {
-						alert("Please select a product to login or register...");
-				}
-		});
-
-	 $("#login-button").live("click", function(){
-				if ( $("#login-button").attr("href") == "#" ) {
-						alert("Please select a product to login or register...");
-				}
-		});
-
-	},
-
-	/* FUNCTION - Enable ARIA
-	---------------------------------------------
-	This function is in place to augment the
-	user interface with ARIA roles, landmarks
-	and states to improve accessibility
-	*/
-
-	enableAria: function(){
-		$("#metafaq").attr("role","search");
-		$("#nav-primary, #nav-secondary, #nav-elh").attr("role", "navigation");
-		$("#content").attr("role","main");
-	},
-
-
-	/* FUNCTION - MetaFAQ Prompt
-	---------------------------------------------
-	Adds a prompt to the metafaq text input and
-	styles text colour based on whether the text
-	input is in focus or not.
-	*/
-
-	metaFAQPrompt: function() {
-
-		$('#metafaq input[type=text]').each(function() {
-
-			$(this).addClass('blurred');
-
-			var initialTitle = "Enter your question...";
-
-			if($(this).val() === '') {
-				$(this).val(initialTitle);
-			}
-
-			$(this).focus(function() {
-				if($(this).val() === "Enter your question...") {
-					$(this).val('').toggleClass('blurred');
-				}
-			});
-
-			$(this).blur(function() {
-				if($(this).val() === '') {
-					$(this).addClass('blurred').val(initialTitle);
-				}
-			});
-
-		});
-
-	},
-
-	/* FUNCTION - Init
-	---------------------------------------------
-	Initialises all interface elements
-	*/
-
-	init: function(){
-
-    	if ($('#login .cta-left').length) {
-        	brandInterface.cssoLogin();
-        }
-
-		if ($('a[rel="external"]').length) {
-			brandInterface.externalLinks();
-		}
-
-		if ($(".read-more").length) {
-			brandInterface.readMore();
-		}
-
-		if ($(".panes").length) {
-			brandInterface.brandTabs();
-		}
-
-		if ($("a.tooltip").length) {
-			brandInterface.brandTooltips();
-		}
-
-		if ($(".conditions").length) {
-			brandInterface.initiateChecklist();
-		}
-
-		brandInterface.brandOverlays();
-		brandInterface.socialBookmarks();
-		brandInterface.metaFAQPrompt();
-
-	}
-
-}
 
 $(document).ready(function(){
 
@@ -871,50 +715,6 @@ $(document).ready(function(){
 
 	//sitracker = new SITEINTEL.SiteTracker(true); // Initiate Site Tracker Script
 
-	brandInterface.init();
-
-	//Equal sized columns
-	jQuery.fn.vjustify=function() {
-		var maxHeight=0;
-		this.each(function(){
-			if (this.offsetHeight>maxHeight) {
-				maxHeight=this.offsetHeight;
-			}
-		});
-		this.each(function(){
-			var firstHeight = maxHeight + "px";
-			if ($.browser.msie) {
-				var ver = getInternetExplorerVersion();
-				if ( ver> -1 ) {
-					if ( ver>= 7.0 ) {
-						$(this).css("min-height", firstHeight);
-					} else {
-						$(this).css("height", firstHeight);
-					}
-				}
-			} else {
-				$(this).css("min-height", firstHeight);
-			}
-			if (this.offsetHeight>maxHeight) {
-				var secondHeight = (maxHeight/-(this.offsetHeight-maxHeight))+"px";
-				if ($.browser.msie) {
-					$(this).css("height", secondHeight);
-				} else {
-					$(this).css("min-height", secondHeight);
-				}
-			}
-		});
-	};
-
-	$(".eq-1").vjustify();
-	$(".eq-2").vjustify();
-	$(".eq-3").vjustify();
-	$(".eq-4").vjustify();
-	$(".eq-5").vjustify();
-	$(".eq-6").vjustify();
-	$(".eq-7").vjustify();
-	$(".eq-8").vjustify();
-	$(".eq-9").vjustify();
-	$(".eq-10").vjustify();
+  BRAND_BANK.INTERFACE.init();
 
 });
