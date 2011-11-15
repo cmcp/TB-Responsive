@@ -42,10 +42,8 @@
             </div><!-- split -->
           </div>
           <div class="sec-col">
-            <div class="split">
               <?php section('nav2'); ?>
               <?php section('key'); ?>
-            </div>
           </div>
         </div><!-- .cols -->
         <?php include('html/metafaq-panel.php'); ?>

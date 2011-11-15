@@ -57,6 +57,10 @@ h5 {
   font-size:1.25em;
 }
 
+a {
+  color:#c00;
+}
+
 .wrapper {
   #percentage > .width(280, 320);
   min-width:280px;
@@ -235,15 +239,14 @@ h5 {
 
 .menu li{
   margin-bottom:1em;
-  padding-left:1.2em;
   color:#c00;
-  &:before {
-    content: "\00BB \0020";
-  }
   a {
     color:#c00;
     text-decoration:none;
     width:100%;
+    &:before {
+      content: "\00BB \0020";
+    }
   }
 }
 
@@ -262,12 +265,13 @@ h5 {
       float:left;
       border:1px solid #d5d9df;
       width:45%;
-      padding:1em 2%;
       margin:0;
       text-decoration:none;
     }
     a {
+      display:block;
       text-decoration:none;
+      padding:1em 0 1em 5%;
     }
   }
 }
@@ -285,7 +289,7 @@ h5 {
   font-size:125%;
   li {
     clear: both;
-    color: #CC0000;
+    color: #0051A3;
     display: block;
     font-weight: bold;
     margin-bottom: 0;
@@ -299,7 +303,7 @@ h5 {
   }
   a {
     text-decoration:none;
-    color:#0051A3;
+    //color:#0051A3;
     display:block;
     border:1px solid #D4DBE3;
     #gradient > .linear-double(#f2f5f8, #f2f5f8, #e4ebf1);

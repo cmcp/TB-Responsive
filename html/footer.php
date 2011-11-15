@@ -5,16 +5,16 @@
     <nav>
       <div class="nav menu">
         <ol>
-          <a href="#"><li>Security Centre</li></a>
-          <a href="#"><li>Change Centre</li></a>
-          <a href="#"><li>Contact</li></a>
-          <a href="#"><li>Sitemap</li></a>
-          <a href="#"><li>About Us</li></a>
-          <a href="#"><li>Community</li></a>
-          <a href="#"><li>Privacy</li></a>
-          <a href="#"><li>Accessibility</li></a>
-          <a href="#"><li>Media Centre</li></a>
-          <a href="#"><li>Brand.com</li></a>
+          <li><a href="#">Security Centre</a></li>
+          <li><a href="#">Change Centre</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Media Centre</a></li>
+          <li><a href="#">Brand.com</a></li>
         </ol>
       </div>
     </nav>
