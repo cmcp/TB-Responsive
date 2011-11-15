@@ -1,4 +1,4 @@
-﻿<div class="panes clearboth"><!-- TAB 1 -->
+<div class="panes clearboth"><!-- TAB 1 -->
 <div class="panel type-3 bg cnr bdr-3 feature img cta-left">
 <div class="wrap">
 <h2>What's Covered?</h2>

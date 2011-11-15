@@ -1,4 +1,4 @@
-﻿<div class="panel type-4 bg cnr img bdr-4 promo cta-left cta-alt loans eq-1">
+<div class="panel type-4 bg cnr img bdr-4 promo cta-left cta-alt loans eq-1">
 <div class="wrap">
 <div class="content">
 <hgroup>

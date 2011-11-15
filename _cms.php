@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 /**
  * @warning This is a sooooper insecure hacked CMS shim.

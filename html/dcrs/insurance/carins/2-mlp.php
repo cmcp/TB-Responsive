@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3 id="legal">Motor Legal Protection (Brand Legal Guard)</h3>
+<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3 id="legal">Motor Legal Protection (Brand Legal Guard)</h3>
 <h4>Some useful information on how this cover works</h4>
 <p>Cover is provided following a road traffic accident involving your insured car in the EU where somebody else is responsible for the accident.</p>
 <p>The cover is for up to £100,000 of legal costs and expenses to help you and your passengers claim compensation for personal injury and uninsured losses, such as your policy excess or lost earnings, from the person responsible.</p>

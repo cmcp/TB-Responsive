@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3 id="vouchers">Pay for your premium with Clubcard vouchers</h3>
+<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3 id="vouchers">Pay for your premium with Clubcard vouchers</h3>
 <p>Use your Clubcard vouchers to help pay for your Brand Car Insurance.  Here's how:</p>
 <ol>
 <li>If you are getting a quote online, proceed to make a payment and select that you wish to pay with Clubcard vouchers</li>

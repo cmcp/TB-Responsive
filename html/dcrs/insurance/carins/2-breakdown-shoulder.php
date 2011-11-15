@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg copy img  cta-left"><div class="wrap"><h3>Brand Breakdown Cover &ndash; Give the hard shoulder the cold shoulder! </h3><div class="content">
+<div class="panel type-2 bdr-2 cnr bg copy img  cta-left"><div class="wrap"><h3>Brand Breakdown Cover &ndash; Give the hard shoulder the cold shoulder! </h3><div class="content">
 <p>We've teamed up with the RAC to offer you a great Breakdown Service. Why not consider adding this to your car insurance policy?</p>
 <ul class="tick">
 <li>Peace of mind that you are covered 365 days a year</li>

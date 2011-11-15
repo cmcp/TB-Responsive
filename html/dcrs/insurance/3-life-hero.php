@@ -1,4 +1,4 @@
-﻿<div class="panel type-3 bdr-3 cnr bg feature img img-10 cta-left cta-alt"><div class="wrap"><h2>Life insurance - Look after the people who matter</h2><div class="content">
+<div class="panel type-3 bdr-3 cnr bg feature img img-10 cta-left cta-alt"><div class="wrap"><h2>Life insurance - Look after the people who matter</h2><div class="content">
 <p>Brand Life insurance is easy in every way, whether you're looking to protect your nearest and dearest or cover your mortgage. It's simple to understand and apply for.</p>
 <ul>
 <li>Get <strong>£40 off your shopping or fuel at Brand</strong> when you get a quote for Brand Life Insurance by 29&nbsp;February&nbsp;2012 and then buy the policy.</li>

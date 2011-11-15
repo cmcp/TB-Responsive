@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg feature img img-40 cta-right"><div class="wrap"><h2>Value Car Insurance</h2><div class="content">
+<div class="panel type-2 bdr-2 cnr bg feature img img-40 cta-right"><div class="wrap"><h2>Value Car Insurance</h2><div class="content">
 <p>Brand Value Car Insurance is a <strong>comprehensive policy</strong> without some of the go-faster stripes for the more cost-conscious motorist.</p>
 <p>It's cheaper because it's only available online and it has a higher compulsory excess.</p>
 <p class="small">Brand Car Insurance is arranged and administered by Brand Bank and is underwritten by a select range of insurers.</p>

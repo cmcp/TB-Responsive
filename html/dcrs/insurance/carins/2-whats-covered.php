@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3>What's covered?</h3><div class="content">
+<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3>What's covered?</h3><div class="content">
 <table cellspacing="0" cellpadding="0" summary="Brand Car Insurance Breakdown Assistance comparison table">
 <thead>
 <tr>

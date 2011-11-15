@@ -1,4 +1,4 @@
-﻿<section>
+<section>
   <div class="section tasks nowrap">
     <h2>What do you want to do?</h2>
     <nav>

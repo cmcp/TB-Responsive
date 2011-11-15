@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg feature img img-10 cta-right"><div class="wrap"><h2>How to contact us</h2><div class="content">
+<div class="panel type-2 bdr-2 cnr bg feature img img-10 cta-right"><div class="wrap"><h2>How to contact us</h2><div class="content">
 <h3>If you'd like to get a quote</h3>
 <p>Click on the button below or call us on<br><strong class="red rate">0845 246 2895</strong>.</p>
 <p>If you need to make a claim or a change on your policy please see below for the contact number.</p>

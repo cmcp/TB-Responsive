@@ -1,4 +1,4 @@
-﻿<section>
+<section>
   <div class="section wide-0 clearboth all-products nowrap">
     <h2>A full list of all our products</h2>
     <nav>

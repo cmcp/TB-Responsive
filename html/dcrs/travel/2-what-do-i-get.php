@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg copy img  cta-left"><div class="wrap"><h3>What do I get with Brand Travel Insurance?</h3><div class="content">
+<div class="panel type-2 bdr-2 cnr bg copy img  cta-left"><div class="wrap"><h3>What do I get with Brand Travel Insurance?</h3><div class="content">
 <ul class="tick">
 <li><strong>Cover for families, couples, groups or individuals</strong> - <a shape="rect" href="#cover">find out what's covered in our policies below</a></li>
 <li><strong>Choose Finest, Standard or Value</strong> so you only take out the level of cover you need</li>

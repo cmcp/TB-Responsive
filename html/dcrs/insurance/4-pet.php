@@ -1,4 +1,4 @@
-﻿<div class="panel type-4 bg cnr img cta-alt cta-left bdr-4">
+<div class="panel type-4 bg cnr img cta-alt cta-left bdr-4">
 <div class="wrap eq-1">
 <h2>Pet Insurance</h2>
 <div class="content">

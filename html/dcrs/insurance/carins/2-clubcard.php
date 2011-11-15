@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg feature img img-10 cta-right"><div class="wrap"><h2>Exclusive discounts for Clubcard customers with Brand Car Insurance!</h2><div class="content">
+<div class="panel type-2 bdr-2 cnr bg feature img img-10 cta-right"><div class="wrap"><h2>Exclusive discounts for Clubcard customers with Brand Car Insurance!</h2><div class="content">
 <p>If you're a Clubcard customer, get an exclusive discount of up to 15%. That's our price promise, which means Clubcard customers receive our best possible price.</p>
 <p>Just enter your Clubcard number when you get a quote.</p>
 <p>So what are you waiting for? Get an even better deal on your Brand Car Insurance now!</p>

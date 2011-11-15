@@ -1,4 +1,4 @@
-﻿<footer>
+<footer>
   <div class="footer clearboth wrapper">
     <div id="fullsite" class="narrow-0"></div>
     <div id="relaxsite"></div>

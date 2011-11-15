@@ -1,4 +1,4 @@
-﻿<ol class="nav-main">
+<ol class="nav-main">
   <li><a href="/personal/finance/insurance/" tabindex="40">Insurance</a></li>
   <li><a href="#" tabindex="40">Credit Cards</a></li>
   <li><a href="#" tabindex="40">Loans</a></li>

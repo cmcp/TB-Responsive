@@ -1,4 +1,4 @@
-﻿<?php include('html/head.php'); ?>
+<?php include('html/head.php'); ?>
     <header>
       <div class="header wrapper">
         <?php include('html/home.php') ?>
@@ -21,7 +21,7 @@
           </div>
           <div class="split split-50">
             <?php include('html/4-dental.php'); ?>
-          <div>
+          </div>
         </div>
       </section>
       </div>

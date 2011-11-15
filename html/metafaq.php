@@ -1,4 +1,4 @@
-﻿<div id="metafaq">
+<div id="metafaq">
   <form method="post" enctype="application/x-www-form-urlencoded" action="http://faq.brandbank.com/templates/brandfinance/seo/resultspage">
     <fieldset>
       <div class="question">

@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 bg cnr">
+<div class="panel type-2 bdr-2 bg cnr">
 <div class="wrap">
 <div class="content">
 <h3>If you want to apply you'll need:</h3>

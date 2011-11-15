@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg feature img img-10 "><div class="wrap"><h2>Policy info - Before you buy...</h2><div class="content">
+<div class="panel type-2 bdr-2 cnr bg feature img img-10 "><div class="wrap"><h2>Policy info - Before you buy...</h2><div class="content">
 <p>Before you buy Brand Car Insurance or Brand Breakdown Cover online, please read, print or save the policy documents, they help explain your cover.</p>
 <p>Brand Car Insurance is arranged and administered by Brand Bank and is underwritten by a select range of insurers.</p>
 <p>Motor Legal Protection (Brand Legal Guard) is underwritten by Ageas Insurance Limited (<a shape="rect" href="/personal/finance/insurance/carins/policy-info.html#legal">limitations apply</a>).</p>

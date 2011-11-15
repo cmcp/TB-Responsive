@@ -1,4 +1,4 @@
-﻿<div id="sidebar" class="split-30">
+<div id="sidebar" class="split-30">
 <aside>
   <div class="asside">
     <div class="type-1 campaign-compare wide-0">
@@ -20,7 +20,7 @@
             <p>Save on holiday essentials at Brand when you take out Teco Annual Travel Insurance</p>
             <p class="time">2 days ago</p>
           </div>
-        <article>
+        </article>
       </div>
     </div>
   </div>

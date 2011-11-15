@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3 id="recommend">Recommend a Friend - Good news travels well!</h3>
+<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3 id="recommend">Recommend a Friend - Good news travels well!</h3>
 <p>Once you've set up your policy, simply recommend us to your family and friends and you could receive a £10 Brand Gift Card or 1,000 Clubcard Points:</p>
 <p>Not only that, your friend or relative will also receive their choice of a <strong>£10 Brand Gift Card</strong> or <strong>1,000 Clubcard Points</strong></p>
 <!-- Read More -->

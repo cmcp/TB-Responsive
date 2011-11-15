@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg feature img img-10 "><div class="wrap"><h3 id="halfords">Halfords Autocentre discounts</h3>
+<div class="panel type-2 bdr-2 cnr bg feature img img-10 "><div class="wrap"><h3 id="halfords">Halfords Autocentre discounts</h3>
 <div class="content">
 <ul class="tick">
 <li>40% off an MOT</li>

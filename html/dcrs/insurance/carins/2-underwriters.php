@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3>Need to make a claim or a change on your policy?</h3><p>Brand Car Insurance is provided by different insurers. The contact details relevant to you will depend on who provides your Car Insurance policy. To find out which insurer provides your Car Insurance policy, please check your policy schedule and click on the relevant link below.</p>
+<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3>Need to make a claim or a change on your policy?</h3><p>Brand Car Insurance is provided by different insurers. The contact details relevant to you will depend on who provides your Car Insurance policy. To find out which insurer provides your Car Insurance policy, please check your policy schedule and click on the relevant link below.</p>
 <!-- START UNDERWRITERS INFO -->
 <div id="underwriters">
 <div class="read-more">

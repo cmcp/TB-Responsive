@@ -1,4 +1,4 @@
-﻿<div class="panel type-3 bdr-3 cnr bg  "><div class="wrap"><h3>How much could you save?</h3><div class="fleft">
+<div class="panel type-3 bdr-3 cnr bg  "><div class="wrap"><h3>How much could you save?</h3><div class="fleft">
 <table cellspacing="0" cellpadding="0" summary="Non-Clubcard savings comparison table" style="width: 345px;">
 <thead>
 <tr>

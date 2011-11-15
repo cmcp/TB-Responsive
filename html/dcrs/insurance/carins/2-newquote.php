@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3>Looking for a new quote?</h3><p>Apply online or call us to get a new Brand Car Insurance quote on:</p>
+<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3>Looking for a new quote?</h3><p>Apply online or call us to get a new Brand Car Insurance quote on:</p>
 <p><strong class="red rate">0845 246 2895</strong></p>
 <p class="small">Brand Car Insurance is arranged and administered by Brand Bank and is underwritten by a select range of insurers.</p>
 <ul class="cta">

@@ -1,4 +1,4 @@
-﻿<div class="panel type-3 bdr-3 cnr bg feature img img-10 cta-right"><div class="wrap"><h2>Discounted Car Insurance cover for every mile...</h2><div class="content">
+<div class="panel type-3 bdr-3 cnr bg feature img img-10 cta-right"><div class="wrap"><h2>Discounted Car Insurance cover for every mile...</h2><div class="content">
 <p>At Brand Bank, we are committed to helping you enjoy cheaper car insurance. That's why we aim to give customers our best possible deal.</p>
 <p>See below for our discounts and how you could save with Brand Car Insurance.</p>
 <ul>

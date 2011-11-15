@@ -1,2 +1,2 @@
-﻿<div class="panel type-1 bdr-1 cnr bg  cta-left"><div class="wrap"><h3>Typetalk</h3><p>We're committed to making our products accessible to all customers.</p>
+<div class="panel type-1 bdr-1 cnr bg  cta-left"><div class="wrap"><h3>Typetalk</h3><p>We're committed to making our products accessible to all customers.</p>
 <p>Contact us by requesting Typetalk on <strong class="red">18001 0845 293 9474</strong>.</p></div></div>

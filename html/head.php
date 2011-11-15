@@ -1,8 +1,8 @@
-﻿<?php $less = 0; ?><!doctype html>
-<html lang="en">
+<?php $less = 0; ?>
+<html>
 <head>
   <?php if ($_SERVER['HTTP_HOST'] == 'localhost') { print('<script type="text/javascript" src="/js/lib/firebug-lite/build/firebug-lite.js"></script>'); } ?>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+  <meta charset="utf-8"/>
   <title>brandbank.com</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <script>

@@ -1,4 +1,4 @@
-﻿<aside>
+<aside>
   <div class="aside clearboth supplimental">
     <div class="item img">
       <h3>Security Centre</h3>

@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg copy img  cta-left"><div class="wrap"><h3>What's in it for me? The key benefits...</h3><ul class="tick">
+<div class="panel type-2 bdr-2 cnr bg copy img  cta-left"><div class="wrap"><h3>What's in it for me? The key benefits...</h3><ul class="tick">
 <li><strong>A small courtesy car</strong> to keep you on the road if your car needs repaired following a claim (<a shape="rect" href="#note1" class="tooltip">exclusions apply</a><img class="sprite icon-tooltip" alt="" src="/assets/core/img/layout/transparent.png">)
 <div class="footnotes">
 <div id="note1" class="note"><div>

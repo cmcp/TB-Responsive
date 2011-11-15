@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg copy img  cta-left"><div class="wrap"><h3>Please remember, Brand Travel Insurance is provided by different insurers</h3><p><strong>Brand Travel Insurance is provided by different insurers</strong> - Cover purchased on or after 16th October 2010 is provided by Ageas Insurance Limited.</p>
+<div class="panel type-2 bdr-2 cnr bg copy img  cta-left"><div class="wrap"><h3>Please remember, Brand Travel Insurance is provided by different insurers</h3><p><strong>Brand Travel Insurance is provided by different insurers</strong> - Cover purchased on or after 16th October 2010 is provided by Ageas Insurance Limited.</p>
 <p>Cover purchased before 16th October 2010 is provided by UK Insurance Limited.</p>
 <p>Please select the policy documents relevant to you.</p>
 <!-- START UNDERWRITERS INFO -->

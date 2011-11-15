@@ -1,4 +1,4 @@
-﻿<div class="panel type-3 bdr-3 cnr bg feature img  cta-right"><div class="wrap"><h2>Car Insurance - Could you cut the cost of your cover with Brand Car Insurance?</h2><div class="content">
+<div class="panel type-3 bdr-3 cnr bg feature img  cta-right"><div class="wrap"><h2>Car Insurance - Could you cut the cost of your cover with Brand Car Insurance?</h2><div class="content">
 <p>Don't pay more than you need to for car insurance. With Brand Car Insurance you get quality cover packed with benefits at a great Brand price.</p>
 <ul>
 <li><strong>Up to 10% online discount</strong></li>

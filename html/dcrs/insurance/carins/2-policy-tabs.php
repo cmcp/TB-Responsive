@@ -1,4 +1,4 @@
-﻿<div class="panes">
+<div class="panes">
 <div class="panel type-2 bdr-2 cnr bg img copy cta-right">
 <div class="wrap">
 <h2>Policy Start After 11 October 2011</h2>

@@ -1,4 +1,5 @@
-﻿<?php
+<!DOCTYPE html>
+<?php
 $BASE_PATH = dirname(__FILE__);
 
 require_once('_cms.php');

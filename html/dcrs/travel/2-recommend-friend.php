@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg copy img  cta-left"><div class="wrap"><h3>Recommend a friend... and we'll reward you both...</h3><div class="content">
+<div class="panel type-2 bdr-2 cnr bg copy img  cta-left"><div class="wrap"><h3>Recommend a friend... and we'll reward you both...</h3><div class="content">
 <p>Great news travels fast. Tell a friend about Brand Travel Insurance and we'll reward you both!</p>
 <ul>
 <li>Simply recommend us to your family and friends </li>

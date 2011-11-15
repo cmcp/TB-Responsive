@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3>How much could you save with Clubcard?</h3><p id="cb-save">We've compared our prices online against some of our competitors and Clubcard customers can make great savings.</p>
+<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3>How much could you save with Clubcard?</h3><p id="cb-save">We've compared our prices online against some of our competitors and Clubcard customers can make great savings.</p>
 <table cellspacing="0" cellpadding="0" summary="Clubcard savings comparison table">
 <thead>
 <tr>

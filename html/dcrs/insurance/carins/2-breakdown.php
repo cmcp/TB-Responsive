@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3>Breakdown Cover - Give the hard shoulder the cold shoulder!</h3><p>We've teamed up with the RAC to bring you <a shape="rect" href="/personal/finance/insurance/carins/extra-options.html#breakdown">breakdown cover</a> with a choice of three UK cover levels (Value, Standard and Finest) and Euro Plus.</p>
+<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3>Breakdown Cover - Give the hard shoulder the cold shoulder!</h3><p>We've teamed up with the RAC to bring you <a shape="rect" href="/personal/finance/insurance/carins/extra-options.html#breakdown">breakdown cover</a> with a choice of three UK cover levels (Value, Standard and Finest) and Euro Plus.</p>
 <p><a shape="rect" href="/personal/finance/insurance/carins/extra-options.html#breakdown">Brand Breakdown Cover</a> underwritten by RAC Motoring Services and/or RAC Insurance Limited.</p>
 <div class="read-more">
 <h3>Compare our two cover levels</h3>

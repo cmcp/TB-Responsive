@@ -1,4 +1,4 @@
-﻿<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3></h3><h3 id="iphone">Free Mobile Motoring App for your iPhone</h3>
+<div class="panel type-2 bdr-2 cnr bg  "><div class="wrap"><h3></h3><h3 id="iphone">Free Mobile Motoring App for your iPhone</h3>
 <p><strong>Get your FREE easy to use iPhone application that provides guidance and step-by-step help if you need to report an accident or breakdown.</strong></p>
 <p>Brand Bank Mobile Motoring can help steer Brand Car Insurance customers in the right direction - whether you're feeling stressed after a bump on the road, or you're stranded on the hard shoulder with a car that refuses to move. As well as on the spot tips and step-by-step help following an accident or breakdown, the app can also remind you of key dates for your car - including MOT, service and road tax.</p>
 <!-- Read More -->

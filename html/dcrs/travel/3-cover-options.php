@@ -1,4 +1,4 @@
-﻿<div class="panel type-3 bg cnr bdr-3 feature img cta-right">
+<div class="panel type-3 bg cnr bdr-3 feature img cta-right">
 <div class="wrap">
 <h2>Brand Travel Insurance - Our Cover Options</h2>
 <div class="content">
