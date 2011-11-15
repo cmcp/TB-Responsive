@@ -473,7 +473,7 @@ var BRAND_BANK  = (function(module) {
       if (!load_interface) {
         return false;
       }
-      for (i = 1; i <= 10; i += 1) {
+      for (i = 1; i <= max_eq; i += 1) {
         els = $(".eq-" + i)
         if (els.length) {
           els.vjustify();
