@@ -191,6 +191,11 @@ $DCR_MAP = array(
     'key' => array('html/dcrs/layout/1.php'),
     'hero' => array('html/dcrs/layout/3.php', 'html/dcrs/layout/3.php', 'html/dcrs/layout/3.php'),
   ),
+
+  'test-patterns' => array (
+    'template' => 'content-page.php',
+    'main' => array('html/dcrs/patterns/checkboxes.php', 'html/dcrs/patterns/external_link.php', 'html/dcrs/patterns/readmore.php', 'html/dcrs/patterns/tabs.php'),
+  ),
   
   'personal/finance/travel/' => array (
     'template' => 'nav-page.php',

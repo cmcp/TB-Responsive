@@ -566,6 +566,9 @@ var BRAND_BANK  = (function(module) {
       if (!load_interface) {
         return false;
       }
+      if (!load_interface) {
+        return false;
+      }
       for (i = 1; i <= max_eq; i += 1) {
         els = $(".eq-" + i);
         if (els.length) {
@@ -597,18 +600,18 @@ var BRAND_BANK  = (function(module) {
      */
     this.fullSite = function() {
 
-      if (!load_interface) {
+      if (!load_interface && $('body').hasClass('no-relax'))  {
         return false;
       }
       $('#fullsite').html('<a class="btn" id="showfull">Show full site</a>')
       $('#relaxsite').html('<a class="btn" id="relaxfull">Return to optimised site</a>');
       $('#showfull').live('click', function() {
-        $('html').addClass('wide');
+        $('body').addClass('wide');
         window.scrollTo(0,0);
         docCookies.setItem('TB_fullsite', 'true');
       });
       $('#relaxfull').live('click', function() {
-        $('html').removeClass('wide');
+        $('body').removeClass('wide');
         window.scrollTo(0,0);
         docCookies.removeItem('TB_fullsite');
       });
@@ -627,6 +630,7 @@ var BRAND_BANK  = (function(module) {
           btnClose = '<a href="#" class="btn toggle btn-close">Close</a>';
 
       if (!load_interface) {
+        $('.read-more div.readMoreContent, .rmc').css('display', 'inherit');
         return false;
       }
 
