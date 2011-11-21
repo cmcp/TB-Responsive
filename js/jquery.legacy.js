@@ -693,6 +693,7 @@ var BRAND_BANK  = (function(module) {
           api;
 
       if (!load_interface) {
+        $('.panes').css('display', 'inherit');
         return false;
       }
 
