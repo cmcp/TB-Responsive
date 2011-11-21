@@ -430,6 +430,7 @@ var BRAND_BANK  = (function(module) {
       var termsCount = 1;
 
       if (!load_interface) {
+        $('.convert').css('display', 'inherit');
         return false;
       }
 
