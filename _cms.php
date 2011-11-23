@@ -194,9 +194,11 @@ $DCR_MAP = array(
 
   'test-patterns' => array (
     'template' => 'content-page.php',
-    'main' => array('html/dcrs/patterns/checkboxes.php', 'html/dcrs/patterns/external_link.php', 'html/dcrs/patterns/readmore.php', 'html/dcrs/patterns/tabs.php'),
+    'main' => array('html/dcrs/patterns/checkboxes.php', 'html/dcrs/patterns/external_link.php', 'html/dcrs/patterns/readmore.php', 'html/dcrs/patterns/tabs.php', 'html/dcrs/patterns/2-img.php'),
   ),
   
+
+
   'personal/finance/travel/' => array (
     'active' => 'travel',
     'template' => 'nav-page.php',
@@ -244,6 +246,9 @@ $DCR_MAP = array(
     'main' => array('html/dcrs/insurance/travelins/2-quote.php', 'html/dcrs/insurance/travelins/2-apply-info.php', 'html/dcrs/insurance/travelins/2-important-info.php'),
     'supp' => array('html/dcrs/insurance/travelins/1-elh.php'),
   ),
+
+
+
 
 
   'personal/finance/insurance/' => array (
