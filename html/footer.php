@@ -4,7 +4,7 @@
     <div id="relaxsite"></div>
     <nav>
       <div class="nav menu">
-        <ol>
+        <ul>
           <li><a href="#">Security Centre</a></li>
           <li><a href="#">Change Centre</a></li>
           <li><a href="#">Contact</a></li>
@@ -15,7 +15,7 @@
           <li><a href="#">Accessibility</a></li>
           <li><a href="#">Media Centre</a></li>
           <li><a href="#">Brand.com</a></li>
-        </ol>
+        </ul>
       </div>
     </nav>
     <div class="copyright clearboth">
