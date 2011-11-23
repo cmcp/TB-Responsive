@@ -482,7 +482,7 @@ var BRAND_BANK  = (function(module) {
     this.cssoLogin = function() {
 
       // Create drop down & login buttons
-      var dropDown = '<select name="csso-login" id="csso-login">' +
+      var drop_down = '<select name="csso-login" id="csso-login">' +
               '<option value="">Select product to login</option>' +
               '<option value="s">Savings</option>' +
               '<option value="l">Loans</option>' +
@@ -499,7 +499,7 @@ var BRAND_BANK  = (function(module) {
         return false;
       }
 
-      $("#login .cta-left").prepend(dropDown);
+      $("#login .cta-left").prepend(drop_down);
 
       $("#csso-login").live("change ready blur", function(){
 
@@ -507,8 +507,8 @@ var BRAND_BANK  = (function(module) {
           var product = $("#csso-login").val();
 
           // Source link lists
-          var rLinks = $("#reg-links");
-          var lLinks = $("#login-links");
+          var r_links = $("#reg-links");
+          var l_links = $("#login-links");
 
           // Identify Buttons
           var reg = $("#register-button");
@@ -538,18 +538,18 @@ var BRAND_BANK  = (function(module) {
               }
 
           }
-          loginDestination(product,reg,login,rLinks,lLinks);
+          loginDestination(product,reg,login,r_links,l_links);
       });
       $("#csso-login").trigger("ready"); // Beat IE7 with a clue-by-four.
       $("#register-button").live("click", function(){
-          if ( $("#register-button").attr("href") == "#" ) {
-              alert("Please select a product to login or register...");
-          }
+        if ( $("#register-button").attr("href") == "#" ) {
+          alert("Please select a product to login or register...");
+        }
       });
-     $("#login-button").live("click", function(){
-          if ( $("#login-button").attr("href") == "#" ) {
-              alert("Please select a product to login or register...");
-          }
+      $("#login-button").live("click", function(){
+        if ( $("#login-button").attr("href") == "#" ) {
+          alert("Please select a product to login or register...");
+        }
       });
     };
 
@@ -648,30 +648,19 @@ var BRAND_BANK  = (function(module) {
 
       // Add headings & Toggle
       $(".read-more .toggle").each(function(){
-
-        // Add relevant alt text (taken from heading) to open and close buttons
-        //var hContent = $(this).siblings('h3').text();
-        //var aContent = $("img",this).attr("alt") +  " - " + hContent;
-        //$("img",this).attr("alt", aContent);
-
         // On click do stuff
         $(this).click(function(e){
-
           if ($(this).hasClass("btn-read-more")){
-
             $(this).siblings(".rmc").animate({ height: "show" }, 750, "easeInOutQuint").focus().css("outline", "none");
             $(this).siblings(".btn-close").toggle();
             $(this).toggle();
             e.preventDefault();
-
           } else if ($(this).hasClass("btn-close")) {
-
             $(this).siblings(".rmc").animate({ height: "hide" }, 750, "easeInOutQuint");
             $(this).siblings(".btn-read-more").toggle();
             $(this).toggle();
             $(this).closest(".read-more").focus().css("outline", "none");
             e.preventDefault();
-
           }
         });
       });
@@ -688,8 +677,8 @@ var BRAND_BANK  = (function(module) {
      * as the titles of the tabs.
      */
     this.tabs = function() {
-      var tabsIndex = 0,
-          tabCount = 0,
+      var tabs_index = 0,
+          tab_count = 0,
           api;
 
       if (!load_interface) {
@@ -702,12 +691,12 @@ var BRAND_BANK  = (function(module) {
       if ($(window).width() < 768) {
         $(".panes").each(function(){
           var heading;
-          tabsIndex += 1;
-          tabCount = 0;
+          tabs_index += 1;
+          tab_count = 0;
           $('.panel', this).each(function() {
-            tabCount += 1;
+            tab_count += 1;
             heading = $('h2:first', this).remove();
-            heading.attr('id', 'tab-' + tabsIndex + ':' + tabCount);
+            heading.attr('id', 'tab-' + tabs_index + ':' + tab_count);
             $(this).before(heading);
           });
         });
@@ -721,24 +710,24 @@ var BRAND_BANK  = (function(module) {
         });
       } else {
         $('.panes').each(function(){
-          tabsIndex += 1;
+          tabs_index += 1;
 
           // Create list with unique id
-          $(this).prepend('<ul class="tabs" id="tabs-' + tabsIndex + '"></ul>');
+          $(this).prepend('<ul class="tabs" id="tabs-' + tabs_index + '"></ul>');
 
           // For each panel heading create a tab and append it to the list
           $(this).find(".panel h2").each(function() {
-            var tabTitle = $(this).text();
-            tabCount += 1;
-            $("#tabs-" + tabsIndex).append('<li><a href="#tab' + tabCount + '">' +  tabTitle + '</a><div></div></li>');
-            $(this).css({ "position" : "absolute", "left" : "-9999px" });
+            var tab_title = $(this).text();
+            tab_count += 1;
+            $("#tabs-" + tabs_index).append('<li><a href="#tab' + tab_count + '">' +  tab_title + '</a><div></div></li>');
+            $(this).css({ "position" : "absolute", "left" : "-999em" });
           });
 
-          $("#tabs-" + tabsIndex + " li a").each(function() {
-            var myW = $(this).width(),
-                newW = myW + 5;
-            $(this).width(newW);
-            $(this).next("div").width(newW);
+          $("#tabs-" + tabs_index + " li a").each(function() {
+            var old_width = $(this).width(),
+                new_width = old_width + 5;
+            $(this).width(new_width);
+            $(this).next("div").width(new_width);
           });
         });
       }

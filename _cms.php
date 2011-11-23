@@ -40,8 +40,8 @@ $DCR_MAP = array(
     'template' => 'nav-page.php',
     'nav2' => array('html/dcrs/layout/left-nav-nav.php'),
     'key' => array('html/dcrs/layout/1.php'),
-    '4-left' => array('html/dcrs/layout/4.php'),
-    '4-right' => array('html/dcrs/layout/4.php'),
+    '4-left' => array('html/dcrs/layout/4.php', 'html/dcrs/layout/4.php'),
+    '4-right' => array('html/dcrs/layout/4.php','html/dcrs/layout/4.php'),
   ),
   'layouts/nav/3' => array (
     'template' => 'nav-page.php',
@@ -127,8 +127,8 @@ $DCR_MAP = array(
     'template' => 'content-page.php',
     'nav2' => array('html/dcrs/layout/left-nav-content.php'),
     'key' => array('html/dcrs/layout/1.php'),
-    '4-left' => array('html/dcrs/layout/4.php'),
-    '4-right' => array('html/dcrs/layout/4.php'),
+    '4-left' => array('html/dcrs/layout/4.php', 'html/dcrs/layout/4.php'),
+    '4-right' => array('html/dcrs/layout/4.php','html/dcrs/layout/4.php'),
   ),
   'layouts/content/3' => array (
     'template' => 'content-page.php',
@@ -198,12 +198,14 @@ $DCR_MAP = array(
   ),
   
   'personal/finance/travel/' => array (
+    'active' => 'travel',
     'template' => 'nav-page.php',
     'nav2' => array('html/dcrs/travel/left-nav.php'),
     '4-left' => array('html/dcrs/travel/4-travel-money.php', 'html/dcrs/travel/4-euro-breakdown.php'),
     '4-right' => array('html/dcrs/travel/4-travel-insurance.php', 'html/dcrs/travel/4-travel-pet.php'),
   ),
   'personal/finance/insurance/travelins/index.html' => array (
+    'active' => 'travel',
     'template' => 'nav-page.php',
     'nav2' => array('html/dcrs/insurance/travelins/left-nav.php'),
     'key' => array('html/dcrs/insurance/travelins/1-existing-customer.php', 'html/dcrs/insurance/travelins/1-retrieve-quote.php', ),
@@ -212,6 +214,7 @@ $DCR_MAP = array(
     'supp' => array('html/dcrs/insurance/travelins/1-call-for-quote.php', 'html/dcrs/insurance/travelins/1-elh.php'),
   ),
   'personal/finance/insurance/travelins/policy-info.html' => array (
+    'active' => 'travel',
     'template' => 'content-page.php',
     'nav2' => array('html/dcrs/insurance/travelins/left-nav.php'),
     'key' => array('html/dcrs/insurance/travelins/1-existing-customer.php'),
@@ -220,6 +223,7 @@ $DCR_MAP = array(
     'supp' => array('html/dcrs/insurance/travelins/1-elh.php'),
   ),
   'personal/finance/insurance/travelins/contact.html' => array (
+    'active' => 'travel',
     'template' => 'content-page.php',
     'nav2' => array('html/dcrs/insurance/travelins/left-nav.php'),
     'key' => array('html/dcrs/insurance/travelins/1-typetalk.php'),
@@ -227,11 +231,13 @@ $DCR_MAP = array(
     'supp' => array('html/dcrs/insurance/travelins/1-elh.php'),
   ),
   'personal/finance/insurance/travelins/cover-options.html' => array (
+    'active' => 'travel',
     'template' => 'content-page.php',
     'nav2' => array('html/dcrs/insurance/travelins/left-nav.php'),
     'hero' => array('html/dcrs/insurance/travelins/3-cover-options.php', 'html/dcrs/insurance/travelins/3-covered.php'),
   ),
   'personal/finance/insurance/travelins/apply.html' => array (
+    'active' => 'travel',
     'template' => 'content-page.php',
     'nav2' => array('html/dcrs/insurance/travelins/left-nav.php'),
     'key' => array('html/dcrs/insurance/travelins/1-call-for-quote.php', 'html/dcrs/insurance/travelins/1-retrieve-quote.php', 'html/dcrs/insurance/travelins/1-existing-customer.php'),
@@ -241,6 +247,7 @@ $DCR_MAP = array(
 
 
   'personal/finance/insurance/' => array (
+    'active' => 'insurance',
     'template' => 'nav-page.php',
     'nav2' => array('html/dcrs/insurance/left-nav.php'),
     'key' => array('html/1-compare.php'),
@@ -251,6 +258,7 @@ $DCR_MAP = array(
   ),
 
   'personal/finance/insurance/carins/index.html' => array (
+    'active' => 'insurance',
     'template' => 'nav-page.php',
     'nav2' => array('html/dcrs/insurance/carins/left-nav.php'),
     'key' => array('html/dcrs/insurance/carins/1-contact.php', 'html/dcrs/insurance/carins/1-retrieve-quote.php', 'html/dcrs/insurance/carins/1-elh.php'),
@@ -259,6 +267,7 @@ $DCR_MAP = array(
     'supp' => array('html/dcrs/insurance/carins/1-tv-ad.php', 'html/dcrs/insurance/carins/1-iphone.php', 'html/dcrs/insurance/carins/1-loans.php'),
   ),
   'personal/finance/insurance/carins/value/index.html' => array (
+    'active' => 'insurance',
     'template' => 'content-page.php',
     'nav2' => array('html/dcrs/insurance/carins/left-nav.php'),
     'key' => array('html/dcrs/insurance/carins/1-retrieve-quote.php', 'html/dcrs/insurance/carins/1-elh.php'),
@@ -266,6 +275,7 @@ $DCR_MAP = array(
     'supp' => array('html/dcrs/insurance/carins/1-contact.php', 'html/dcrs/insurance/carins/1-recommend.php'),
   ),
   'personal/finance/insurance/carins/extra-options.html' => array (
+    'active' => 'insurance',
     'template' => 'content-page.php',
     'nav2' => array('html/dcrs/insurance/carins/left-nav.php'),
     'key' => array('html/dcrs/insurance/carins/1-retrieve-quote.php', 'html/dcrs/insurance/carins/1-elh.php'),
@@ -273,12 +283,14 @@ $DCR_MAP = array(
     'supp' => array('html/dcrs/insurance/carins/1-contact.php', 'html/dcrs/insurance/carins/1-recommend.php'),
   ),
   'personal/finance/insurance/carins/our-discounts.html' => array (
+    'active' => 'insurance',
     'template' => 'content-page.php',
     'nav2' => array('html/dcrs/insurance/carins/left-nav.php'),
     'key' => array('html/dcrs/insurance/carins/1-retrieve-quote.php', 'html/dcrs/insurance/carins/1-elh.php'),
     'hero' => array('html/dcrs/insurance/carins/3-discounts.php', 'html/dcrs/insurance/carins/3-savings.php'),
   ),
   'personal/finance/insurance/carins/clubcard-customers.html' => array (
+    'active' => 'insurance',
     'template' => 'content-page.php',
     'nav2' => array('html/dcrs/insurance/carins/left-nav.php'),
     'key' => array('html/dcrs/insurance/carins/1-retrieve-quote.php', 'html/dcrs/insurance/carins/1-elh.php'),
@@ -286,6 +298,7 @@ $DCR_MAP = array(
     'supp' => array('html/dcrs/insurance/carins/1-contact.php', 'html/dcrs/insurance/carins/1-recommend.php'),
   ),
   'personal/finance/insurance/carins/policy-info.html' => array (
+    'active' => 'insurance',
     'template' => 'content-page.php',
     'nav2' => array('html/dcrs/insurance/carins/left-nav.php'),
     'key' => array('html/dcrs/insurance/carins/1-retrieve-quote.php', 'html/dcrs/insurance/carins/1-elh.php'),
@@ -293,6 +306,7 @@ $DCR_MAP = array(
     'supp' => array('html/dcrs/insurance/carins/1-contact.php', 'html/1-acrobat.php'),
   ),
   'personal/finance/insurance/carins/existing-customers.html' => array (
+    'active' => 'insurance',
     'template' => 'content-page.php',
     'nav2' => array('html/dcrs/insurance/carins/left-nav.php'),
     'key' => array('html/dcrs/insurance/carins/1-retrieve-quote.php', 'html/dcrs/insurance/carins/1-elh.php'),
@@ -300,6 +314,7 @@ $DCR_MAP = array(
     'supp' => array('html/dcrs/insurance/carins/1-contact.php', 'html/dcrs/insurance/carins/1-check-policy.php', 'html/1-acrobat.php', 'html/dcrs/insurance/carins/1-loans.php'),
   ),
   'personal/finance/insurance/carins/contact.html' => array (
+    'active' => 'insurance',
     'template' => 'content-page.php',
     'nav2' => array('html/dcrs/insurance/carins/left-nav.php'),
     'key' => array('html/dcrs/insurance/carins/1-retrieve-quote.php', 'html/dcrs/insurance/carins/1-elh.php'),

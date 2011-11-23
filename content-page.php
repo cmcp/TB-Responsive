@@ -19,29 +19,33 @@
             <div class="split">
               <section>
                 <div class="section">
-                  <?php section('hero'); ?>
+                  <div class="type-3">
+                    <?php section('hero'); ?>
+                  </div>
                   <div class="columns">
-                    <div class="split split-50 left">
+                    <div class="split split-50 left type-4">
                       <?php section('4-left'); ?>
                     </div>
-                    <div class="split split-50 right">
+                    <div class="split split-50 right type-4">
                       <?php section('4-right'); ?>
                     </div>
                   </div>
-                  <?php section('hero2'); ?>
+                  <div class="type-3">
+                    <?php section('hero2'); ?>
+                  </div>
                 </div>
               </section>
               <div class="fireplace">
-              <div class="split split-70">
+              <div class="split split-70 type-2">
                 <?php section('main'); ?>
               </div>
-              <div class="split split-30">
+              <div class="split split-30 type-1">
                 <?php section('supp'); ?>
               </div>
               </div><!-- .fireplace -->
             </div><!-- split -->
           </div>
-          <div class="sec-col">
+          <div class="sec-col type-1">
               <?php section('nav2'); ?>
               <?php section('key'); ?>
           </div>
@@ -54,5 +58,8 @@
         <?php include('html/nav-main.php'); ?>
       </div>
     </nav>
+    <div class="wrapper">
+      <?php include('html/supplimental.php'); ?>
+    </div>
 <?php include('html/footer.php'); ?>
 <?php include('html/foot.php'); ?>
