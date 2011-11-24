@@ -567,13 +567,10 @@ var BRAND_BANK  = (function(module) {
       if (!load_interface) {
         return false;
       }
-      if (!load_interface) {
-        return false;
-      }
       for (i = 1; i <= max_eq; i += 1) {
         els = $(".eq-" + i);
         if (els.length) {
-          els.vjustify($(window).width() < 600); // Don't resize if viewport is too small.
+          els.vjustify($(window).width() < 920); // Don't resize if viewport is too small.
         }
       }
     };
@@ -601,7 +598,7 @@ var BRAND_BANK  = (function(module) {
      */
     this.fullSite = function() {
 
-      if (!load_interface && $('body').hasClass('no-relax'))  {
+      if (!load_interface || $('body').hasClass('no-relax'))  {
         return false;
       }
       $('#fullsite').html('<a class="btn" id="showfull">Show full site</a>')
