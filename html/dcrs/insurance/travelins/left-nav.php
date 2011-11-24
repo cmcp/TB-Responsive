@@ -1,5 +1,5 @@
 <nav>
-  <div class="panel type-1 bdr-1 bg cnr nav">
+  <div class="panel type-1 nav">
     <div class="wrap">
       <ul id="nav-secondary">
         <li class="active ">Travel insurance
