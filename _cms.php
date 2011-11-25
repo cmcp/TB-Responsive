@@ -22,9 +22,9 @@ function section($location) {
 function _build_menu_item($item) {
     $class = @$item['class'];
     if ($item['url'] == $_SERVER['REQUEST_URI']) {
-      return("<li class='active'>{$item['text']}</li>");
+      return("<li class='active' tabindex='50'>{$item['text']}</li>");
     } else {
-      return("<li class='$class'><a href='{$item['url']}'>{$item['text']}</a></li>");
+      return("<li class='$class' tabindex='50'><a href='{$item['url']}'>{$item['text']}</a></li>");
     }
 }
 
