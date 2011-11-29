@@ -1,6 +1,6 @@
 <script>
 document.getElementsByTagName('html')[0].className += ' js';
-if (ontouchstart in window) {
+if ('ontouchstart' in window) {
   document.getElementsByTagName('html')[0].className += ' touch';
 }
 // https://developer.mozilla.org/en/DOM/document.cookie
