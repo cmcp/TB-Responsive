@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var touch = window.ontouchstart ? 'true' : 'false';
+	var touch = !!('ontouchstart' in window);
 	$('body').append(
 		'<div class="debug">' + 
 		'Touch: ' + touch + 
