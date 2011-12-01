@@ -7,7 +7,8 @@ function fail_page() {
 }
 $auth = $_SERVER['HTTP_HOST'] != 'localhost';
 if ($auth) {
-  if (!isset($_SERVER['PHP_AUTH_USER'])) {
+  list($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']) = explode(':', base64_decode(substr($_GET['auth'], 6)));
+  if (!$_SERVER['PHP_AUTH_USER']) {
     fail_page();
   } else {
     if (md5($_SERVER['PHP_AUTH_PW']) != '0d107d09f5bbe40cade3de5c71e9e9b7'){
