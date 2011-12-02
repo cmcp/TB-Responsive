@@ -598,7 +598,7 @@ var BRAND_BANK  = (function(module) {
      */
     this.fullSite = function() {
 
-      if (!load_interface || $('body').hasClass('no-relax'))  {
+      if (!load_interface || $('body').hasClass('no-relax') || typeof docCookies === 'undefined')  {
         return false;
       }
       $('#fullsite').html('<a class="btn" id="showfull">Show full site</a>')
