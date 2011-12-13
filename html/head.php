@@ -24,4 +24,8 @@ less.env = 'development';
 <?php } ?>
   </head>
   <body>
-    <div class="full">
+    <div id="top-border">
+      <div id="bottom-border" class="clearing">
+        <div id="page-container">
+          <div id="ls-canvas" class="ls-canvas">
+            <div id="preheader" class="ls-row"></div>

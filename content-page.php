@@ -1,4 +1,5 @@
 <?php include('html/head.php'); ?>
+  <div id="heading" class="ls-row">
     <header>
       <div class="header wrapper">
         <?php include('html/home.php') ?>
@@ -12,6 +13,9 @@
         </div>
       </div><!-- .header -->
     </header>
+  </div><!-- #heading -->
+  <div id="subheading" class="ls-row"></div>
+  <div id="maincontent" class="ls-row">
     <div class="offset">
       <div id="content" class="wrapper">
         <div class="cols">
@@ -61,5 +65,6 @@
     <div class="wrapper">
       <?php include('html/supplimental.php'); ?>
     </div>
+  </div><!-- #maincontent -->
 <?php include('html/footer.php'); ?>
 <?php include('html/foot.php'); ?>
