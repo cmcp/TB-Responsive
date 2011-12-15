@@ -17,16 +17,16 @@
   <div id="maincontent" class="ls-row">
     <div class="offset wide-1">
       <div class="offset-inner">
-      <section>
-        <div class="section columns wrapper">
-          <div class="split split-50">
-            <?php include('html/4-travel.php'); ?>
+        <section>
+          <div class="section columns wrapper">
+            <div class="split split-50">
+              <?php include('html/4-travel.php'); ?>
+            </div>
+            <div class="split split-50">
+              <?php include('html/4-dental.php'); ?>
+            </div>
           </div>
-          <div class="split split-50">
-            <?php include('html/4-dental.php'); ?>
-          </div>
-        </div>
-      </section>
+        </section>
       </div>
     </div><!-- .offset -->
     <div class="wrapper">

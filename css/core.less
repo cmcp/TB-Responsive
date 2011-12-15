@@ -77,7 +77,8 @@ a {
   overflow:hidden;
   border-top:1px solid #d5d9df;
   border-bottom:1px solid #d5d9df;
-  padding-top:5px;
+  padding-top:30px;
+  padding-bottom:30px;
   .bdr-1, .bdr-2, .bdr-3, .bdr-4 {
     #border > .shadow(1px 1px 2px #d6dde7);
   }
@@ -184,11 +185,12 @@ a {
 
 .type-4 .panel, .type-3 .panel, .type-2 .panel, .type-1 .panel {
   float:left;
-  padding:1%;
-  width:95%;
-  margin:0 0 1em 0;
+  padding-top:10px;
+  padding-bottom:10px;
+  #percentage > .padding-horizontal(10, 220); //TODO:  mobile grid
+  margin-bottom:20px;
 }
-.type-1 .nav .wrap {
+.type-1 .nav {
   padding-left:0;
   padding-right:0;
   width:100%;
@@ -199,9 +201,8 @@ a {
 }
 
 .wrap {
-  padding:1em 5%;
   display:inline-block;
-  width:90%;
+  width:100%;
 }
 
 .bg .wrap {
@@ -272,7 +273,7 @@ a {
     li {
       float:left;
       border:1px solid #d5d9df;
-      width:45%;
+      width:49%; //TODO: mobile grid
       margin:0;
       text-decoration:none;
     }
@@ -285,7 +286,10 @@ a {
 }
 
 .copyright {
-  padding:1em 0;
+  margin-top:20px;
+  font-size:75%;
+  float:right;
+  #percentage > .margin-right(20, 920);
 }
 
 #nav-secondary {
