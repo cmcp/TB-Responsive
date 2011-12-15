@@ -19,10 +19,10 @@
       <div class="offset-inner">
         <section>
           <div class="section columns wrapper">
-            <div class="split split-50">
+            <div class="split split-50 left type-4">
               <?php include('html/4-travel.php'); ?>
             </div>
-            <div class="split split-50">
+            <div class="split split-50 right type-4">
               <?php include('html/4-dental.php'); ?>
             </div>
           </div>
