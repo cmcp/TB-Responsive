@@ -6,7 +6,6 @@
         <nav>
           <div class="nav">
             <?php include('html/nav-main.php'); ?>
-            <?php include('html/keyline.php'); ?>
           </div>
         </nav>
         <?php include('html/csso.php'); ?>
