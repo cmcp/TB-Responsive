@@ -1,5 +1,19 @@
-﻿var BANKING_OUTAGE = false,
+var BANKING_OUTAGE = false,
     sitracker;
+
+(function() {
+  var _gaq = _gaq || [],
+      ga, s;
+  _gaq.push(['_setAccount', 'UA-18134820-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+  ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s);
+}());
+
 
 /*----------------- 1. Global variables for IE mac detection -----------------------------*/
 
@@ -332,7 +346,7 @@ else var s=p/(2*Math.PI)*Math.asin(c/a);if(t<1)return-.5*(a*Math.pow(2,10*(t-=1)
     'blackberry': /blackberry/.test(user_agent),
     'blackberry_old': /blackberry/.test(user_agent) && !/webkit/.test(user_agent)
   };
-})(jQuery);
+}(jQuery));
 
 
 //Equal sized columns
@@ -355,7 +369,25 @@ else var s=p/(2*Math.PI)*Math.asin(c/a);if(t<1)return-.5*(a*Math.pow(2,10*(t-=1)
       });
     }
   };
-})(jQuery);
+}(jQuery));
+
+//Outer HTML shim for browsers that don't support it.
+(function($) {
+  $.fn.outerHTML = function() {
+    var content;
+    if (!$(this).length) {
+      return '';
+    }
+    if( "outerHTML" in $(this)[0] ) {
+      return $(this)[0].outerHTML;
+    }
+    else {
+      content = $(this).wrap('<div></div>').parent().html();
+      $(this).unwrap();
+      return content;
+    }
+  }
+}(jQuery));
 
 /* FIX - Background Flicker IE 6
 --------------------------------------------- */
@@ -374,7 +406,7 @@ var BRAND_BANK  = (function(module) {
         load_interface = !$.browser.opera_mini && !$.browser.blackberry_old; //should we load the interface?
 
     /**
-     * Function - show all products meny
+     * Function - show all products men
      * ----------------------------------------------
      * If the all products menu is available on the page then make it available
      * as an item on the primary nav.
@@ -412,7 +444,7 @@ var BRAND_BANK  = (function(module) {
 
     this.enableAria = function(){
       if (!load_interface) {
-        return false;
+        //return false;
       }
       $("#metafaq").attr("role", "search");
       $("#nav-primary, #nav-secondary, #nav-elh").attr("role", "navigation");
@@ -565,7 +597,7 @@ var BRAND_BANK  = (function(module) {
           els,
           max_eq = 10;
       if (!load_interface) {
-        return false;
+        //return false;
       }
       for (i = 1; i <= max_eq; i += 1) {
         els = $(".eq-" + i);
@@ -777,6 +809,35 @@ var BRAND_BANK  = (function(module) {
       });
     };
 
+    /**
+     * TABLES
+     * ---------------------------------------------
+     * Reformats tables into a single column if the table is too wide for
+     * the screen.
+     */
+    this.tables = function() {
+      $('table').each(function() {
+        if ($(this).width() + $(this).offset().left < $(window).width()) {
+          return;
+        } else {
+          var headers = $('thead', this).find('td, th'),
+              footers = $('tfoot', this).find('td, th'),
+              rows = $('tbody', this).find('tr'),
+              data = '';
+          rows.each(function() {
+            $(this).find('td, th').each(function(i) {
+              data += '<tr>';
+              data += $(headers[i]).outerHTML();
+              data += $(this).outerHTML();
+              data += $(footers[i]).outerHTML();
+              data += '</tr>';
+            });
+          });
+          $(this).html(data);
+        }
+      });
+    };
+
     this.init = function() {
       that.allProductsMenu();
       that.checklist();
@@ -787,6 +848,7 @@ var BRAND_BANK  = (function(module) {
       that.readMore();
       that.tabs();
       that.tooltips();
+      that.tables();
       $(window).resize(that.equalHeight).trigger('resize');
     };
   };
@@ -806,8 +868,8 @@ var BRAND_BANK  = (function(module) {
 
 $(document).ready(function(){
 
-	// metafaq
-	$("#metafaq input[type=image]").click(function(){
+  // metafaq
+  $("#metafaq input[type=image]").click(function(){
         var nlpq = $("#nlpq").val();
         if ( nlpq == "Enter your question...") { nlpq = ""; }
         var kb = $("#kb").val();
@@ -816,12 +878,13 @@ $(document).ready(function(){
         return false;
     })
 
-	$(".continue-disabled").live("click", function(){ // fix for loans 15:03 11/03/11
-		return false;
-	});
+  $(".continue-disabled").live("click", function(){ // fix for loans 15:03 11/03/11
+    return false;
+  });
 
-	//sitracker = new SITEINTEL.SiteTracker(true); // Initiate Site Tracker Script
+  //sitracker = new SITEINTEL.SiteTracker(true); // Initiate Site Tracker Script
 
   BRAND_BANK.INTERFACE.init();
 
 });
+
