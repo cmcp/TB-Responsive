@@ -187,7 +187,7 @@ a {
   float:left;
   padding-top:10px;
   padding-bottom:10px;
-  #percentage > .padding-horizontal(10, 220); //TODO:  mobile grid
+  #percentage > .padding-horizontal(10, 280);
   margin-bottom:30px;
 }
 .type-1 .nav {
@@ -273,7 +273,7 @@ a {
     li {
       float:left;
       border:1px solid #d5d9df;
-      width:49%; //TODO: mobile grid
+      #percentage > .width(138, 280);
       margin:0;
       text-decoration:none;
     }
@@ -338,25 +338,25 @@ a {
 }
 
 /* Tabs */
-ul.tabs { 
+ul.tabs {
   padding: 10px 0 0 0 !important;
   margin: 0 0 0 10px;
   float: left;
-  li { 
+  li {
     list-style-type:none;
     float: left; padding: 0; margin: 0 10px 0 0;
     background-image: none;
-    border: 1px solid #dadada; 
+    border: 1px solid #dadada;
     border-bottom:0;
     #border > .radius(4px 4px 0 0);
-    a { 
-      font-family: Arial,Helvetica,sans-serif; 
+    a {
+      font-family: Arial,Helvetica,sans-serif;
       display: block !important;
-      width: auto; 
-      padding: 10px 10px; 
-      border: 4px solid #fff; 
+      width: auto;
+      padding: 10px 10px;
+      border: 4px solid #fff;
       border-bottom: 0;
-      color:#006; 
+      color:#006;
       text-decoration: none;
       #border > .radius(4px 4px 0 0);
     }
@@ -364,22 +364,22 @@ ul.tabs {
       a {
         background: white;
       }
-      div { 
+      div {
         background: white ; z-index: 200;
       }
     }
-    div { 
-      background: #fff; 
-      border-left: 4px solid #fff; 
-      border-right: 4px solid #fff; 
-      padding: 0 10px; height: 9px;  
-      position: relative; 
-      bottom: -5px; 
+    div {
+      background: #fff;
+      border-left: 4px solid #fff;
+      border-right: 4px solid #fff;
+      padding: 0 10px; height: 9px;
+      position: relative;
+      bottom: -5px;
       margin-top: -5px;
       z-index: -10;
     }
   }
- 
+
 }
 
 .elh li {
@@ -400,6 +400,9 @@ ul.tabs {
   }
 }
 
+#fullsite, #relaxsite {
+  margin:20px 0;
+}
 
 @import 'buttons.less';
 
@@ -409,7 +412,7 @@ ul.tabs {
 /* ========== content hiding ======================= */
 
 
-#relaxfull { display:none; }
+#relaxfull { display:none; #percentage > .margin-left(20, 920); }
 #fullsite { display:inherit; }
 
 .wide-0, .wide-1 {
@@ -467,7 +470,7 @@ ul.tabs {
     width:900px;
     margin-left:30px;
   }
-  #relaxfull { display:inherit; }
+  #relaxfull { display:inline-block; }
   #fullsite { display:none; }
 }
 
