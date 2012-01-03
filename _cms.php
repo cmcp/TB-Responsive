@@ -308,7 +308,7 @@ $DCR_MAP = array(
     'nav2' => array('html/dcrs/layout/left-nav-nav.php'),
     'key' => array('html/dcrs/layout/1.php'),
     'hero' => array('html/dcrs/layout/3.php'),
-    'main' => array('html/dcrs/layout/2.php'),
+    'main' => array('html/dcrs/layout/2.php', 'html/dcrs/layout/2.php'),
     'supp' => array('html/dcrs/layout/1.php'),
   ),
   'layouts/nav/4' => array (
@@ -318,7 +318,7 @@ $DCR_MAP = array(
     'key' => array('html/dcrs/layout/1.php'),
     '4-left' => array('html/dcrs/layout/4.php'),
     '4-right' => array('html/dcrs/layout/4.php'),
-    'main' => array('html/dcrs/layout/2.php'),
+    'main' => array('html/dcrs/layout/2.php', 'html/dcrs/layout/2.php'),
     'supp' => array('html/dcrs/layout/1.php'),
   ),
   'layouts/nav/5' => array (
@@ -339,7 +339,7 @@ $DCR_MAP = array(
     '4-left' => array('html/dcrs/layout/4.php'),
     '4-right' => array('html/dcrs/layout/4.php'),
     'hero2' => array('html/dcrs/layout/3.php'),
-    'main' => array('html/dcrs/layout/2.php'),
+    'main' => array('html/dcrs/layout/2.php', 'html/dcrs/layout/2.php'),
     'supp' => array('html/dcrs/layout/1.php'),
   ),
   'layouts/nav/7' => array (
@@ -350,7 +350,7 @@ $DCR_MAP = array(
     'hero' => array('html/dcrs/layout/3.php'),
     '4-left' => array('html/dcrs/layout/4.php'),
     '4-right' => array('html/dcrs/layout/4.php'),
-    'main' => array('html/dcrs/layout/2.php'),
+    'main' => array('html/dcrs/layout/2.php', 'html/dcrs/layout/2.php'),
     'supp' => array('html/dcrs/layout/1.php'),
   ),
   'layouts/nav/8' => array (
@@ -380,7 +380,7 @@ $DCR_MAP = array(
     '4-left' => array('html/dcrs/layout/4.php'),
     '4-right' => array('html/dcrs/layout/4.php'),
     'hero2' => array('html/dcrs/layout/3.php'),
-    'main' => array('html/dcrs/layout/2.php'),
+    'main' => array('html/dcrs/layout/2.php', 'html/dcrs/layout/2.php'),
     'supp' => array('html/dcrs/layout/1.php'),
   ),
   'layouts/content/1' => array (
@@ -405,7 +405,7 @@ $DCR_MAP = array(
     'nav2' => array('html/dcrs/layout/left-nav-content.php'),
     'key' => array('html/dcrs/layout/1.php'),
     'hero' => array('html/dcrs/layout/3.php'),
-    'main' => array('html/dcrs/layout/2.php'),
+    'main' => array('html/dcrs/layout/2.php', 'html/dcrs/layout/2.php'),
     'supp' => array('html/dcrs/layout/1.php'),
   ),
   'layouts/content/4' => array (
@@ -415,7 +415,7 @@ $DCR_MAP = array(
     'key' => array('html/dcrs/layout/1.php'),
     '4-left' => array('html/dcrs/layout/4.php'),
     '4-right' => array('html/dcrs/layout/4.php'),
-    'main' => array('html/dcrs/layout/2.php'),
+    'main' => array('html/dcrs/layout/2.php', 'html/dcrs/layout/2.php'),
     'supp' => array('html/dcrs/layout/1.php'),
   ),
   'layouts/content/5' => array (
@@ -436,7 +436,7 @@ $DCR_MAP = array(
     '4-left' => array('html/dcrs/layout/4.php'),
     '4-right' => array('html/dcrs/layout/4.php'),
     'hero2' => array('html/dcrs/layout/3.php'),
-    'main' => array('html/dcrs/layout/2.php'),
+    'main' => array('html/dcrs/layout/2.php', 'html/dcrs/layout/2.php'),
     'supp' => array('html/dcrs/layout/1.php'),
   ),
   'layouts/content/7' => array (
@@ -447,7 +447,7 @@ $DCR_MAP = array(
     'hero' => array('html/dcrs/layout/3.php'),
     '4-left' => array('html/dcrs/layout/4.php'),
     '4-right' => array('html/dcrs/layout/4.php'),
-    'main' => array('html/dcrs/layout/2.php'),
+    'main' => array('html/dcrs/layout/2.php', 'html/dcrs/layout/2.php'),
     'supp' => array('html/dcrs/layout/1.php'),
   ),
   'layouts/content/8' => array (

@@ -1,5 +1,8 @@
 <?php $less = 0; ?>
-<html>
+<!--[if lt IE 7]> <html class="ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
   <?php if ($_SERVER['HTTP_HOST'] == 'localhost') { print('<script type="text/javascript" src="/js/lib/firebug-lite/build/firebug-lite.js"></script>'); } ?>
   <meta charset="utf-8"/>
