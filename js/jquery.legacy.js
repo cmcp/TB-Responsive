@@ -636,14 +636,15 @@ var BRAND_BANK  = (function(module) {
       $('#fullsite').html('<a class="btn" id="showfull">Show full site</a>')
       $('#relaxsite').html('<a class="btn" id="relaxfull">Return to optimised site</a>');
       $('#showfull').live('click', function() {
-        $('body').addClass('wide');
+        $('html').addClass('wide');
         window.scrollTo(0,0);
         docCookies.setItem('TB_fullsite', 'true');
       });
       $('#relaxfull').live('click', function() {
-        $('body').removeClass('wide');
-        window.scrollTo(0,0);
+        $('html').removeClass('wide');
+        docCookies.setItem('TB_fullsite', 'false');
         docCookies.removeItem('TB_fullsite');
+        window.scrollTo(0,0);
       });
     };
 
@@ -726,6 +727,9 @@ var BRAND_BANK  = (function(module) {
             tab_count += 1;
             heading = $('h2:first', this).remove();
             heading.attr('id', 'tab-' + tabs_index + ':' + tab_count);
+            heading.html(function(i, html) {
+              return html + ' <span class="ui-arrow">&#9660;</span>';
+            });
             $(this).before(heading);
           });
         });
@@ -734,6 +738,8 @@ var BRAND_BANK  = (function(module) {
           effect: 'slide',
           initialIndex: 999,
           onClick: function(event, index) {
+            $('.ui-arrow').show();
+            this.getCurrentTab().find('.ui-arrow').hide();
             $(document).scrollTop(this.getCurrentTab().offset()['top']);
           }
         });

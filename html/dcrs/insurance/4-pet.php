@@ -10,7 +10,7 @@
 <p class="small">Brand Pet Insurance is provided by Royal &amp; Sun Alliance Insurance plc.</p>
 <ul class="cta">
 <li><a shape="rect" href="/personal/finance/insurance/petins/index.html" class="btn btn-nav">Find out more about Brand Pet Insurance...</a></li>
-<li><a shape="rect" rel="#prescreen" href="/personal/finance/insurance/petins/apply.html" class="btn cta">Get a quote for Brand Pet Insurance</a></li>
+<li><a shape="rect" rel="#prescreen" href="/personal/finance/insurance/petins/apply.html" class="btn btn-cta">Get a quote for Brand Pet Insurance</a></li>
 </ul>
 </div>
 <img src="/assets/sections/petins/img/kit-puppy-t2c.png" alt="25% discount for Clubcard holders"></div>
