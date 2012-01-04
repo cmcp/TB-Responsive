@@ -1,9 +1,11 @@
-<div class="panel type-2 bdr-2 cnr bg copy img  cta-left"><div class="wrap"><h3>What do I get with Brand Travel Insurance?</h3><div class="content">
+<div class="panel type-2 bdr-2 cnr bg copy cta-left"><div class="wrap"><h3>Key customer benefits:</h3><div class="content">
 <ul class="tick">
-<li><strong>Cover for families, couples, groups or individuals</strong> - <a shape="rect" href="#cover">find out what's covered in our policies below</a></li>
-<li><strong>Choose Finest, Standard or Value</strong> so you only take out the level of cover you need</li>
-<li><strong>Access to a 24-hour emergency helpline</strong> even whilst you're abroad</li>
-<li><strong>Pay for all or part of your cover with Clubcard Vouchers</strong>. To find out how <a shape="rect" href="/personal/finance/insurance/travelins/policy-info.html">read the policy info</a> page.</li>
+<li><strong>Three cover levels</strong> - Value, Standard and Finest</li>
+<li><strong>24hr emergency helpline</strong> at home or abroad</li>
+<li><strong>Emergency medical expenses</strong> even whilst you're abroad</li>
+<li>Cover for <strong>trip cancellation, delayed departure,  personal posessions</strong> and <strong>emergency replacement</strong> of items</li>
+<li><strong>Use Clubcard vouchers to pay</strong> for some or all of your cover</li>
 </ul>
+<p class="small">Please note excesses, terms and conditions apply. This is a summary of cover and you should refer to the <a href="#">policy documents</a> for full info.</p>
 </div>
-<img src="/img/travel/battered-suitcase-t2c.png" alt=""></div></div>
+</div></div>

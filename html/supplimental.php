@@ -1,5 +1,5 @@
 <aside>
-  <div class="aside clearboth supplimental">
+  <div class="aside clearboth supplimental wide-0">
     <div class="item img">
       <h3>Security Centre</h3>
       <div class="content">
