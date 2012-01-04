@@ -2,7 +2,7 @@
 <div class="wrap">
 <div class="content">
 <hgroup>
-<h2 class="headline">Travel Money from Brand</h2>
+<h2 class="headline">Travel Money from Tesco Bank</h2>
 <h3 class="strapline">Get FREE delivery on all orders over &pound;500!</h3>
 </hgroup>
 <p class="caveat">Delivery charges apply to corders less than &pound;500.  Provided by Travelex Currency Services Limited.</p>

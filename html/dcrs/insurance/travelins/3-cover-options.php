@@ -1,6 +1,6 @@
 <div class="panel type-3 bg cnr bdr-3 feature img cta-right">
 <div class="wrap">
-<h2>Brand Travel Insurance - Our Cover Options</h2>
+<h2>Tesco Bank Travel Insurance - Our Cover Options</h2>
 <div class="content">
 <p>Brand Travel Insurance offers three levels of cover to meet your travel needs:</p>
 <ul class="tick">

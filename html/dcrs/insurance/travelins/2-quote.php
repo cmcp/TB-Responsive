@@ -1,8 +1,7 @@
 <div class="panel type-2 bdr-2 bg cnr">
 <div class="wrap">
 <div class="content">
-<h2>Getting a quote....</h2>
-<p><strong>Please remember that all travellers must</strong>:</p>
+<h2>Please remember that all travellers must be:</h2>
 <ul class="tick">
 <li>Be aged 74 or under</li>
 <li>Be a UK resident for at least 6 months</li>
