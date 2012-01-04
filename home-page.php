@@ -14,15 +14,20 @@
   </div><!-- #heading -->
   <div id="subheading" class="ls-row"></div>
   <div id="maincontent" class="ls-row">
-    <div class="offset wide-1">
+    <div class="offset">
       <div class="offset-inner">
         <section>
-          <div class="section columns wrapper">
-            <div class="split split-50 left type-4">
-              <?php include('html/4-travel.php'); ?>
+          <div class="section wrapper full-col">
+            <div class="type-3">
+              <?php include('html/carousel.php'); ?>
             </div>
-            <div class="split split-50 right type-4">
-              <?php include('html/4-dental.php'); ?>
+            <div class="columns">
+              <div class="split split-50 left type-4">
+                <?php include('html/4-travel.php'); ?>
+              </div>
+              <div class="split split-50 right type-4">
+                <?php include('html/4-dental.php'); ?>
+              </div>
             </div>
           </div>
         </section>
