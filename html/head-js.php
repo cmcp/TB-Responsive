@@ -31,7 +31,7 @@ docCookies = {
 };
 (function () {
   if (docCookies.getItem('TB_fullsite') === 'true') {
-    document.getElementsByTagName('body')[0].className += ' wide';
+    document.getElementsByTagName('html')[0].className += ' wide';
     docCookies.setItem('screen', 'wide');
   }
   if (document.documentElement .clientWidth > 600) {
