@@ -102,16 +102,11 @@ a {
   margin-top:1em;
 }
 
-#login{
-  clear:both;
-}
-
 .nav-main {
   padding:0px;
+  overflow:hidden;
   li {
-    float:left;
-    #percentage > .width(278, 280);
-    margin:.1em .1em;
+    margin:5px 0;
     border:1px solid #d4dbe3;
     text-decoration:none;
     #border > .radius(0.2em);
@@ -122,9 +117,10 @@ a {
     #gradient > .linear-double(#f2f5f8, #f2f5f8, #e5eaf1);
     a {
       display:block;
-      padding:0 0.72em;
+      padding:5px 10px;
       text-decoration:none;
       color:#004ca0;
+      border:1px solid #fff;
     }
   }
 }
@@ -136,24 +132,30 @@ a {
 }
 
 .csso {
-  padding-top:.75em;
-  clear:both;
+  margin:20px 0;
+  overflow:hidden;
 }
 
 #login {
-  font-size:75%;
+  background-color:#f2f5f8;
+  padding:5px;
+  margin:15px 0;
+  line-height:18px;
+  #border > .radius(0.2em);
+  border: 1px solid #D5D9DF;
   label {
-    margin-bottom:0.25em;
+    font-family: @brand-font;
+    font-size:1.5em;
+    display:block;
   }
 }
 
 #csso-login {
-  margin-bottom:0.25em;
   max-width:140px;
 }
 
 .register {
-  font-size:75%;
+  font-size:0.6875em;
   margin-bottom:0.25em;
 }
 
@@ -202,7 +204,7 @@ a {
 
 .wrap {
   display:inline-block;
-  width:100%;
+  width:auto;
 }
 
 .bg .wrap {

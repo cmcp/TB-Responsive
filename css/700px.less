@@ -1,7 +1,8 @@
 ﻿.min-width_768px() {
 
   body, table {
-    font-size:12px;
+    font-size: 75%;
+    line-height: 1.5em;
   }
   h1 {
     font-size:3em;
@@ -20,28 +21,30 @@
   }
   .header {
     overflow:hidden;
+    position:relative;
+    min-height:13.3333em;
   }
 
   .offset {
     overflow:visible;
-    margin-top:-50px;
-    margin-bottom:5px;
   }
 
   .logo {
-    clear:both;
-    margin-top:0;
+    margin-top:40px;
+    float:left;
   }
 
   .nav-main {
     position:absolute;
-    top:68px;
-    margin-left:3%;
+    top:120px;
+    margin-left:35px;
     li {
-      font-size:16px;
+      font-size:1.3333em;
       width:auto;
-      min-width:0px;
-      margin:20px .1em 0 .1em;
+      margin:0 10px 0 0;
+      &:last-child {
+        margin:0;
+      }
       &.active {
         border-bottom:none;
         padding-bottom:11px;
@@ -50,39 +53,43 @@
       }
     }
   }
-  .home-link {
-    clear:left;
-    float:left;
-    margin-top:13px;
-    margin-bottom:8px;
-    position:static;
-    margin-left:0;
+  .home-link { 
+    left: 0;
+    margin-left: 0;
+    top: 120px;
     img {
       height:22px;
     }
   }
   .keyline {
-    clear:both;
-    font-size:10px;
-    position:relative;
-    top:-125px;
-    float:right;
-    padding-top:3px;
+    font-size:11px;
+    line-height:22px;
+    overflow:hidden;
+    list-style:none;
     li {
       float:left;
       padding:0 .5em;
     }
   }
-  .logo { padding-top:40px; float:left;}
-  .csso{
-    float:right;
-    position:relative;
+  .csso{ 
+    position:absolute;
     padding:0;
-    top:-120px;
-    clear:right;
+    top:0;
+    right:0;
+    margin:0;
   }
-  .register { float:right; }
-    .supplimental .item {
+  #login {
+  float:right;
+  label {
+    display:inline;
+  }
+}
+  .register {
+    float:right;
+    clear:right;
+    font-size:0.91667em;
+  }
+  .supplimental .item {
     clear:none;
   }
   .all-products {
