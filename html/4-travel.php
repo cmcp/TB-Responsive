@@ -6,8 +6,8 @@
 <h3 class="strapline">Get FREE delivery on all orders over &pound;500!</h3>
 </hgroup>
 <p class="caveat">Delivery charges apply to corders less than &pound;500.  Provided by Travelex Currency Services Limited.</p>
-<a href="#" class="btn btn-cta">Buy now</a> <a href="content-page.php" class="btn btn-nav">More</a>
+<a href="#" class="btn btn-cta">Buy now</a> <a href="/personal/finance/travel/" class="btn btn-nav">More</a>
 </div>
-<img src="img/placeholder.png" alt=""/>
+<img src="img/travel/packing.png" alt=""/>
 </div>
 </div>

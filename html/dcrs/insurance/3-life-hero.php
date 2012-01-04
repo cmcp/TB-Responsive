@@ -7,6 +7,6 @@
 </div>
 <img src="/assets/sections/lifeins/img/p10-40-off-shopping-wellies-t3f.png" alt="£40 off shopping or fuel"> 
 <ul class="cta">
-<li><a shape="rect" href="/personal/finance/insurance/lifeins/index.html" class="sprite fom"><img src="/assets/core/img/layout/transparent.png" alt="Find out more about Brand Life Insurance..."></a></li>
-<li><a shape="rect" rel="#prescreen" href="/personal/finance/insurance/lifeins/apply-life.html" class="sprite get-a-quote"><img src="/assets/core/img/layout/transparent.png" alt="Get a quote for Brand Life Insurance"></a></li>
+<li><a shape="rect" href="/personal/finance/insurance/lifeins/index.html" class="btn btn-nav">Find out more about Brand Life Insurance...</a></li>
+<li><a shape="rect" rel="#prescreen" href="/personal/finance/insurance/lifeins/apply-life.html" class="btn btn-cta">Get a quote for Brand Life Insurance</a></li>
 </ul></div></div>

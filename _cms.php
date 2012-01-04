@@ -204,7 +204,7 @@ $MENU = array(
         'text' => 'Pet insurance',
       ),
       array(
-        'url' => '/personal/finance/insurance/travelins/cover-options.html',
+        'url' => '/personal/finance/insurance/travelins/index.html',
         'text' => 'Travel insurance',
       ),
       array(

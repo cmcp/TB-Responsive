@@ -7,8 +7,8 @@
 </ul>
 <p class="small">Please note that exchange rates may vary depending on if you buy over the phone, online or in store.</p>
 <ul class="cta">
-<li><a shape="rect" href="/personal/finance/travel/travelmoney/index.html" class="sprite fom"><img src="/assets/core/img/layout/transparent.png" alt="Find out more about Tesco Travel Money..."></a></li>
-<li><a shape="rect" rel="external" href="https://www.corporatetravelmoney.com/TPF/" class="sprite buy-online"><img src="/assets/core/img/layout/transparent.png" alt="Buy Tesco Travel Money online"></a></li>
+<li><a shape="rect" href="/personal/finance/travel/travelmoney/index.html" class="btn btn-nav">Find out more about Tesco Travel Money...</a></li>
+<li><a shape="rect" rel="external" href="https://www.corporatetravelmoney.com/TPF/" class="btn btn-cta">Buy Tesco Travel Money online</a></li>
 </ul>
 </div>
 <img src="/assets/sections/travelmoney/img/carousel-t4c.png" alt="Great exchange rates"></div></div>

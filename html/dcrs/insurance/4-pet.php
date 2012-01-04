@@ -9,8 +9,8 @@
 <p class="small">Introductory discount. Applies in year 1. Conditions apply.</p>
 <p class="small">Brand Pet Insurance is provided by Royal &amp; Sun Alliance Insurance plc.</p>
 <ul class="cta">
-<li><a shape="rect" href="/personal/finance/insurance/petins/index.html" class="sprite fom"><img src="/assets/core/img/layout/transparent.png" alt="Find out more about Brand Pet Insurance..."></a></li>
-<li><a shape="rect" rel="#prescreen" href="/personal/finance/insurance/petins/apply.html" class="sprite get-a-quote"><img src="/assets/core/img/layout/transparent.png" alt="Get a quote for Brand Pet Insurance"></a></li>
+<li><a shape="rect" href="/personal/finance/insurance/petins/index.html" class="btn btn-nav">Find out more about Brand Pet Insurance...</a></li>
+<li><a shape="rect" rel="#prescreen" href="/personal/finance/insurance/petins/apply.html" class="btn cta">Get a quote for Brand Pet Insurance</a></li>
 </ul>
 </div>
 <img src="/assets/sections/petins/img/kit-puppy-t2c.png" alt="25% discount for Clubcard holders"></div>

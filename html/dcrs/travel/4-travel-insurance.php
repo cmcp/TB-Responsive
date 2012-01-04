@@ -8,8 +8,8 @@
 </ul>
 <p class="small">Tesco Travel Insurance is provided by Ageas Insurance Ltd and DAS Legal Expenses Insurance Company Ltd for Legal Expenses Cover</p>
 <ul class="cta">
-<li><a shape="rect" href="/personal/finance/insurance/travelins/index.html" class="sprite fom"><img src="/assets/core/img/layout/transparent.png" alt="Find out more about Tesco Travel Insurance..."></a></li>
-<li><a shape="rect" rel="#prescreen" href="/personal/finance/insurance/travelins/apply.html" class="sprite get-a-quote"><img src="/assets/core/img/layout/transparent.png" alt="Get a quote for Tesco Travel Insurance"></a></li>
+<li><a shape="rect" href="/personal/finance/insurance/travelins/index.html" class="btn btn-nav">Find out more about Tesco Travel Insurance...</a></li>
+<li><a shape="rect" rel="#prescreen" href="/personal/finance/insurance/travelins/apply.html" class="btn btn-cta">Get a quote for Tesco Travel Insurance</a></li>
 </ul>
 </div>
 <img src="/assets/sections/travelins/img/p7-beachkit-t4c.png" alt="Family cover only £2.30 per day"></div></div>

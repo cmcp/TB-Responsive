@@ -7,8 +7,8 @@
 <p class="small">25% discount online is an introductory discount and applies in year 1. Conditions apply.</p>
 <p class="small">Tesco Pet Insurance is provided by Royal &amp; Sun Alliance Insurance plc.</p>
 <ul class="cta">
-<li><a shape="rect" href="/personal/finance/insurance/petins/additional-options.html#overseas" class="sprite fom"><img src="/assets/core/img/layout/transparent.png" alt="Find out more about insuring your pet abroad..."></a></li>
-<li><a shape="rect" rel="#prescreen" href="/personal/finance/insurance/petins/apply.html" class="sprite get-a-quote"><img src="/assets/core/img/layout/transparent.png" alt="Get a quote for Tesco Pet Insurance"></a></li>
+<li><a shape="rect" href="/personal/finance/insurance/petins/additional-options.html#overseas" class="btn btn-nav">Find out more about insuring your pet abroad...</a></li>
+<li><a shape="rect" rel="#prescreen" href="/personal/finance/insurance/petins/apply.html" class="btn btn-cta">Get a quote for Tesco Pet Insurance</a></li>
 </ul>
 </div>
 <img src="/assets/sections/petins/img/kit-puppy-t2c.png" alt="25% discount online for Clubcard holders"></div></div>

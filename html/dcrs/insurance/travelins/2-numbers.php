@@ -1,4 +1,4 @@
-<div class="panel type-2 bdr-2 cnr bg copy img  "><div class="wrap">
+<div class="panel type-2 bdr-2 cnr bg copy img  " id="existing"><div class="wrap">
 <table cellspacing="0" cellpadding="0" summary="Brand Travel Insurance Ageas Insurance Limited telephone numbers">
 <tbody>
 <tr>

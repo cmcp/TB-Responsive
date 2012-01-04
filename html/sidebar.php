@@ -2,7 +2,7 @@
 <aside>
   <div class="asside">
     <div class="type-1 campaign-compare wide-0">
-      <h4>Search the market for leading UK brands and pay the price you see!</h4>
+      <img src="/assets/cross-sell/cross-sell-compare-1.jpg" alt="Search the market for leading UK brands and pay the price you see!" style="width:100%;"/>
     </div>
     <div class="type-1">
       <h4 class="wide-0">Twitter</h4>

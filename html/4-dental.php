@@ -8,6 +8,6 @@
 <p class="caveat">Applies to new customers until 17th August 2011.  Provided by AXA-PPP Healthcare.</p>
 <a href="#" class="btn btn-cta">Get quote</a> <a href="#" class="btn btn-nav">More</a>
 </div>
-<img src="img/placeholder.png" alt=""/>
+<img src="img/insurance/health/toothbrush.png" alt=""/>
 </div>
 </div>
